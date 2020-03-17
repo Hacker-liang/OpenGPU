@@ -9,7 +9,8 @@
 import Foundation
 import UIKit
 
-class OGRenderView: UIView {
+class OGRenderView: UIView, OGImageConsumer {
+
     public var backgroundRenderColor: OGColor = .red
     public var fillModel: Int = 0
     public var imageOrentation: OGImageOrientation = .portrait
@@ -18,11 +19,14 @@ class OGRenderView: UIView {
     private var displayRenderBuffer: GLuint?
     private var viewPort: CGSize = CGSize.zero
     
+    var maximumInputs: UInt
+    
     lazy private var displayShader: OGShaderProgram = {
         return OGShaderProgram(vertexShaderString: OGShaderLanguage.vertex.shaderContent(), fragmentShaderString: OGShaderLanguage.framgment.shaderContent())
     }()
     
     override init(frame: CGRect) {
+        maximumInputs = 1
         super.init(frame: frame)
         self.configDisplayView()
         OGEAGLContext.shared().runOperationSynchronously {
@@ -89,9 +93,6 @@ class OGRenderView: UIView {
         glBindFramebuffer(GLenum(GL_FRAMEBUFFER), self.displayFramebuffer!)
         glViewport(0, 0, GLsizei(viewPort.width), GLsizei(viewPort.height))
     }
-}
-
-extension OGRenderView: OGImageConsumer {
     
     func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: UInt) {
         if displayFramebuffer == nil {
@@ -109,7 +110,6 @@ extension OGRenderView: OGImageConsumer {
         framebuffer.release()
         OGEAGLContext.shared().presentBufferForDisplay()
     }
-    
 }
 
 public let kStandardImageVertices:[GLfloat] = [-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0]

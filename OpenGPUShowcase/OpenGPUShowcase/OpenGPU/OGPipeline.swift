@@ -11,13 +11,15 @@ import Foundation
 /// 图像数据提供者，例如摄像头Camera，照片读取Picture等都会遵守该协议
 protocol OGImageProvider {
     var targets: OGTargetContainer {get}
-    
 }
 
 extension OGImageProvider {
     
-    func addTarget(target: OGImageConsumer, atIndex index: UInt? = nil) {
-        let weakConsumer = WeakImageConsumer(value: target, index: index ?? UInt(targets.count+1))
+    func addTarget(target: OGImageConsumer, atTargetIndex index: UInt? = nil) {
+        let weakConsumer = WeakImageConsumer(value: target, index: index ?? 0)
+        if let i = index, i>((weakConsumer.consumer?.maximumInputs ?? 1)-1) {
+            fatalError("out of range when addTarget")
+        }
         self.targets.append(target: weakConsumer)
     }
     
@@ -31,14 +33,17 @@ extension OGImageProvider {
             }
         }
         for consumer in self.targets {
-            consumer.0.newFramebufferAvailable(framebuffer: framebuffer, fromSourceIndex: 0)
+            consumer.0.newFramebufferAvailable(framebuffer: framebuffer, fromSourceIndex: consumer.1)
         }
     }
 }
 
+
 /// 图像数据消费者，例如DisplayView，文件存储等都会遵守该协议
 protocol OGImageConsumer {
     
+    var maximumInputs:UInt { get }
+
     func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: UInt)
     
 }
@@ -47,7 +52,6 @@ protocol OGImageConsumer {
 class WeakImageConsumer {
     
     var consumer: OGImageConsumer?
-    
 //    save the index of self
     let indexOfTarget: UInt
     
@@ -58,6 +62,7 @@ class WeakImageConsumer {
 }
 
 class OGTargetContainer: Sequence {
+    
     private var targets = [WeakImageConsumer]()
     
     private var queue = DispatchQueue(label: "OGTargetContainerQueue")

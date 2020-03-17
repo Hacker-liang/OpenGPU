@@ -15,20 +15,22 @@ class OGBaseFilter: OGImageConsumer, OGImageProvider {
     var inputFrameBuffers = [UInt: OGFramebuffer]()
     var outputFrameBuffer: OGFramebuffer!
     
-    private let maximumInputs: UInt
+    var maximumInputs: UInt
+    
     private let shader: OGShaderProgram
     
     
     init(shader: OGShaderProgram, numberOfInputs: UInt = 1) {
         self.maximumInputs = numberOfInputs
         self.shader = shader
+        self.targets = OGTargetContainer()
     }
     
-    init(vertexShader: String? = nil, fragmentShader: String, numberOfInput: UInt = 1) {
+    convenience init(vertexShader: String? = nil, fragmentShader: String, numberOfInput: UInt = 1) {
         
-        self.shader = OGShaderProgram(vertexShaderString: vertexShader ?? OGShaderLanguage.vertex.shaderContent(), fragmentShaderString: fragmentShader)
+        let shader = OGShaderProgram(vertexShaderString: vertexShader ?? OGShaderLanguage.vertex.shaderContent(), fragmentShaderString: fragmentShader)
         
-        self.maximumInputs = numberOfInput
+        self.init(shader: shader, numberOfInputs: numberOfInput)
     }
     
     var targets: OGTargetContainer = OGTargetContainer()
@@ -42,8 +44,8 @@ class OGBaseFilter: OGImageConsumer, OGImageProvider {
         if (UInt(self.inputFrameBuffers.count) == self.maximumInputs) {  //所有的纹理都已经就位
             self.renderFrame()
             self.updateTargets(withFramebuffer: self.outputFrameBuffer)
+            self.releaseInputFramebuffers() //释放所有输入进来的framebuffer
         }
-        
     }
     
     private func renderFrame() {
@@ -59,6 +61,13 @@ class OGBaseFilter: OGImageConsumer, OGImageProvider {
             texteures.append((f.texture!, kStandardTextureCoordinate))
         }
         renderQuad(withProgram: self.shader, vertices: kStandardImageVertices, textures: texteures)
+    }
+    
+    private func releaseInputFramebuffers() {
+        for key in self.inputFrameBuffers.keys {
+            self.inputFrameBuffers[key]?.release()
+        }
+        self.inputFrameBuffers.removeAll()
     }
 }
 

@@ -84,13 +84,15 @@ public class OGShaderProgram {
         glGetShaderiv(shader, GLenum(GL_COMPILE_STATUS), &compileStatus)
         if compileStatus != 1 {
             var logLength: GLint = 0
+            
+            glGetShaderiv(shader, GLenum(GL_INFO_LOG_LENGTH), &logLength)
             var compileLog = [CChar](repeating:0, count:Int(logLength))
             
             glGetShaderInfoLog(shader, logLength, &logLength, &compileLog)
             print("Compile log: \(String(cString:compileLog))")
             switch type {
-                case .vertex: print("Vertex shader compile error:")
-                case .fragment: print("Fragment shader compile error:")
+                case .vertex: fatalError("Vertex shader compile error:")
+                case .fragment: fatalError("Fragment shader compile error:")
             }
         }
         return shader

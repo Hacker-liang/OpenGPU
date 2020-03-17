@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         self.view.addSubview(displayView)
         camera = OGCamera(capturePreset: AVCaptureSession.Preset.hd1280x720, cameraPosition: .back, captureAsYUV: false)
         
-        let fragmentShader = ""
         let filter = OGBaseFilter(vertexShader: nil, fragmentShader: FragmentShader, numberOfInput: 1)
         
         camera! --> filter --> displayView
