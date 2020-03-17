@@ -46,7 +46,6 @@ class OGRenderView: UIView {
         let eaglLayer = self.layer as! CAEAGLLayer
         eaglLayer.isOpaque = true
         eaglLayer.drawableProperties = [String(describing: NSNumber(value: false)):kEAGLDrawablePropertyRetainedBacking, kEAGLColorFormatRGBA8: kEAGLDrawablePropertyColorFormat]
-        
     }
     
     private func createFramebuffer() {
@@ -94,7 +93,7 @@ class OGRenderView: UIView {
 
 extension OGRenderView: OGImageConsumer {
     
-    func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: uint) {
+    func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: UInt) {
         if displayFramebuffer == nil {
             self.createFramebuffer()
         }
@@ -102,13 +101,19 @@ extension OGRenderView: OGImageConsumer {
         clearFramebufferColor(color: backgroundRenderColor)
         var textures = [(GLuint, [GLfloat])]()
         if let texture = framebuffer.texture {
-            textures.append((texture, standardTextureCoordinate))
+            textures.append((texture, kStandardTextureCoordinate))
         }
         glBindRenderbuffer(GLenum(GL_RENDERBUFFER), displayRenderBuffer!)
 
-        renderQuad(withProgram: displayShader, vertices: standardImageVertices, textures: textures)
+        renderQuad(withProgram: displayShader, vertices: kStandardVerticalFlipImageVertices, textures: textures)
         framebuffer.release()
         OGEAGLContext.shared().presentBufferForDisplay()
     }
     
 }
+
+public let kStandardImageVertices:[GLfloat] = [-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0]
+public let kStandardVerticalFlipImageVertices:[GLfloat] = [-1.0, 1.0, 1.0, 1.0, -1.0, -1.0, 1.0, -1.0]
+
+public let kStandardTextureCoordinate:[GLfloat] = [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+

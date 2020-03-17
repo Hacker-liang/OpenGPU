@@ -57,7 +57,6 @@ public func renderQuad(withProgram program: OGShaderProgram, vertices:[GLfloat],
         return
     }
     
-   
     glVertexAttribPointer(vertextLocation, 2, GLenum(GL_FLOAT), 0, 0, vertices)
     
     for (i,textureItem) in textures.enumerated() {
@@ -92,5 +91,6 @@ extension String {
     }
 }
 
-public let standardImageVertices:[GLfloat] = [-1.0, -1.0, 1.0, -1.0, -1.0, 1.0, 1.0, 1.0]
-public let standardTextureCoordinate:[GLfloat] = [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+
+
+

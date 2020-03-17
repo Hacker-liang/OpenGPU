@@ -16,7 +16,6 @@ fileprivate let ContextQueueTag = 88
 
 class OGEAGLContext {
 
-    
     public class func shared() -> OGEAGLContext {
         return sharedImageProcessingContext
     }
@@ -40,7 +39,7 @@ class OGEAGLContext {
     init() {
         serialDispatchQueue.setSpecific(key: dispatchQueueKey, value: ContextQueueTag)
         
-        guard let tempContext = EAGLContext(api: .openGLES3) else {
+        guard let tempContext = EAGLContext(api: .openGLES2) else {
             fatalError("创建opengl上下文失败")
         }
         context = tempContext

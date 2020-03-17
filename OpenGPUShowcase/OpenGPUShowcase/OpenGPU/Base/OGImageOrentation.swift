@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import OpenGLES
 
 public enum OGImageOrientation {
     case portrait
@@ -31,6 +32,7 @@ public enum OGImageOrientation {
         case (.landscapeRight, .portraitUpsideDown): return .rotateClockwise
         }
     }
+    
 }
 
 public enum OGRotation {
@@ -47,6 +49,19 @@ public enum OGRotation {
         switch self {
         case .noRotation, .rotate180, .flipHorizontally, .flipVertically: return false
         case .rotateCounterclockwise, .rotateClockwise, .rotateClockwiseAndFlipVertically, .rotateClockwiseAndFlipHorizontally: return true
+        }
+    }
+    
+    var textureCoordinates: [Float] {
+        switch self {
+            case .noRotation: return [0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0]
+            case .rotateCounterclockwise: return [0.0, 1.0, 0.0, 0.0, 1.0, 1.0, 1.0, 0.0]
+            case .rotateClockwise: return [1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+            case .rotate180: return [1.0, 1.0, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+            case .flipHorizontally: return [1.0, 0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0]
+            case .flipVertically: return [0.0, 1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0]
+            case .rotateClockwiseAndFlipVertically: return [0.0, 0.0, 0.0, 1.0, 1.0, 0.0, 1.0, 1.0]
+            case .rotateClockwiseAndFlipHorizontally: return [1.0, 1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0]
         }
     }
 }

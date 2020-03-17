@@ -29,6 +29,7 @@
 		6607DC112419D8C200CC5C69 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC102419D8C200CC5C69 /* OpenGLES.framework */; };
 		6607DC132419D93900CC5C69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC122419D93900CC5C69 /* CoreGraphics.framework */; };
 		6607DC152419D96800CC5C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC142419D96800CC5C69 /* UIKit.framework */; };
+		66801A3824205EB9006F7D1A /* OGBaseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66801A3724205EB9006F7D1A /* OGBaseFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		6607DC102419D8C200CC5C69 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		6607DC122419D93900CC5C69 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6607DC142419D96800CC5C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		66801A3724205EB9006F7D1A /* OGBaseFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGBaseFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +166,7 @@
 		6607DBF32419D83100CC5C69 /* OpenGPU */ = {
 			isa = PBXGroup;
 			children = (
+				66801A3624205C16006F7D1A /* Filter */,
 				6607DBF42419D83100CC5C69 /* Render */,
 				6607DBF72419D83100CC5C69 /* OGPipeline.swift */,
 				6607DBF82419D83100CC5C69 /* OGCamera.swift */,
@@ -212,6 +215,14 @@
 				6607DC0E2419D8BA00CC5C69 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		66801A3624205C16006F7D1A /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				66801A3724205EB9006F7D1A /* OGBaseFilter.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +368,7 @@
 				6607DC052419D83100CC5C69 /* OGCamera.swift in Sources */,
 				6607DC0A2419D83100CC5C69 /* OGShaderProgram.swift in Sources */,
 				6607DC072419D83100CC5C69 /* OGEAGLContext.swift in Sources */,
+				66801A3824205EB9006F7D1A /* OGBaseFilter.swift in Sources */,
 				6607DC0C2419D83100CC5C69 /* OGColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

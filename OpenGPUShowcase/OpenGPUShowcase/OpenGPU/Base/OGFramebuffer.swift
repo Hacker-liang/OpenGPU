@@ -14,6 +14,8 @@ class OGFramebuffer {
     
     public var tag: String?
     
+    public var size: CGSize
+    
     private weak var context: OGEAGLContext?
     
     private (set) var hash: Int64 = 0
@@ -37,6 +39,8 @@ class OGFramebuffer {
             self.texture = generate2DTexture(minFilter: minFilter, maxFilter: maxFilter, wrapS: wrapS, wrapT: wrapT)
         }
         self.context = context
+        self.size = size
+
         if !textureOnly {  //if not only create texture, then create fbo
             self.createFramebuffer(texture: texture!, width: GLint(size.width), height: GLint(size.height), internalformat: internalFormat, format: format, type: type)
         } else {
@@ -53,7 +57,7 @@ class OGFramebuffer {
         glActiveTexture(GLenum(GL_TEXTURE1))
         
         glGenFramebuffers(1, &framebuffer)
-        glBindBuffer(GLenum(GL_FRAMEBUFFER), framebuffer)
+        glBindFramebuffer(GLenum(GL_FRAMEBUFFER), framebuffer)
         glBindTexture(GLenum(GL_TEXTURE_2D), texture)
         
         //为texture分配空间，但是不填充，由fbo渲染完之后自动填充
@@ -63,7 +67,7 @@ class OGFramebuffer {
         
         let status = glCheckFramebufferStatus(GLenum(GL_FRAMEBUFFER))
         if status != GLenum(GL_FRAMEBUFFER_COMPLETE) {
-            print("create fbo error")
+            fatalError("create fbo error")
         }
         
         if stencilTest {
@@ -89,6 +93,14 @@ class OGFramebuffer {
             framebufferCache?.retureToCache(framebuffer: self)
         }
         
+    }
+    
+    public func activateFramebuffer() {
+        guard let fb = self.framebuffer else {
+            fatalError("no valid framebuffer")
+        }
+        glBindFramebuffer(GLenum(GL_FRAMEBUFFER), fb)
+        glViewport(0, 0, GLsizei(size.width), GLsizei(size.height))
     }
 }
 

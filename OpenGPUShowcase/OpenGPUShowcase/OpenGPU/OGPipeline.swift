@@ -10,31 +10,28 @@ import Foundation
 
 /// 图像数据提供者，例如摄像头Camera，照片读取Picture等都会遵守该协议
 protocol OGImageProvider {
-    var targetContainer: OGTargetContainer {get}
+    var targets: OGTargetContainer {get}
+    
 }
 
 extension OGImageProvider {
-    func addTarget(target: OGImageConsumer, atIndex: Int? = nil) {
-        if let index = atIndex {
-            if index > 0 && index <= self.targetContainer.targets.count {
-                self.targetContainer.targets.insert(WeakImageConsumer(value: target, index: UInt(index)), at: index)
-            }
-        } else {
-            self.targetContainer.targets.append(WeakImageConsumer(value: target, index: UInt(self.targetContainer.targets.count)))
-        }
+    
+    func addTarget(target: OGImageConsumer, atIndex index: UInt? = nil) {
+        let weakConsumer = WeakImageConsumer(value: target, index: index ?? UInt(targets.count+1))
+        self.targets.append(target: weakConsumer)
     }
     
     func updateTargets(withFramebuffer framebuffer: OGFramebuffer) {
-        if self.targetContainer.targets.count == 0 {  //如果没有target要先retain再release，会将framebuffer回收。
+        if self.targets.count == 0 {  //如果没有target要先retain再release，会将framebuffer回收。
             framebuffer.retain()
             framebuffer.release()
         } else {
-            for _ in self.targetContainer.targets {
+            for _ in 0..<self.targets.count {
                 framebuffer.retain()
             }
         }
-        for (index, weakConsumer) in self.targetContainer.targets.enumerated() {
-            weakConsumer.consumer?.newFramebufferAvailable(framebuffer: framebuffer, fromSourceIndex: uint(index))
+        for consumer in self.targets {
+            consumer.0.newFramebufferAvailable(framebuffer: framebuffer, fromSourceIndex: 0)
         }
     }
 }
@@ -42,21 +39,26 @@ extension OGImageProvider {
 /// 图像数据消费者，例如DisplayView，文件存储等都会遵守该协议
 protocol OGImageConsumer {
     
-    func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: uint)
+    func newFramebufferAvailable(framebuffer: OGFramebuffer, fromSourceIndex: UInt)
     
 }
 
+// It is usual appended in a list, we hope not to keep 'consumer' strong reference
 class WeakImageConsumer {
+    
     var consumer: OGImageConsumer?
-    let index: UInt
+    
+//    save the index of self
+    let indexOfTarget: UInt
+    
     init(value: OGImageConsumer, index: UInt) {
         self.consumer = value
-        self.index = index
+        self.indexOfTarget = index
     }
 }
 
 class OGTargetContainer: Sequence {
-    var targets = [WeakImageConsumer]()
+    private var targets = [WeakImageConsumer]()
     
     private var queue = DispatchQueue(label: "OGTargetContainerQueue")
     var count: Int {
@@ -76,7 +78,7 @@ class OGTargetContainer: Sequence {
                     return nil
                 }
                 index += 1
-                return (self.targets[index-1].consumer!, self.targets[index-1].index)
+                return (self.targets[index-1].consumer!, self.targets[index-1].indexOfTarget)
              }
         }
     }
@@ -85,6 +87,10 @@ class OGTargetContainer: Sequence {
         self.queue.async {
             
         }
+    }
+    
+    public func append(target: WeakImageConsumer) {
+        self.targets.append(target)
     }
     
 }

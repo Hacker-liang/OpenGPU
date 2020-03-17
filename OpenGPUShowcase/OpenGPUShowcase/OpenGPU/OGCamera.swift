@@ -10,7 +10,8 @@ import Foundation
 import AVFoundation
 
 class OGCamera: NSObject, OGImageProvider {
-    var targetContainer: OGTargetContainer
+    
+    var targets: OGTargetContainer
     
     let captureAsYUV: Bool  //是否以YUV的格式进行视频捕获
     
@@ -28,7 +29,7 @@ class OGCamera: NSObject, OGImageProvider {
         self.captureAsYUV = captureAsYUV
         self.cameraPosition = cameraPosition
         
-        self.targetContainer = OGTargetContainer()
+        self.targets = OGTargetContainer()
         super.init()
         self.configCamera()
     }
@@ -94,14 +95,19 @@ class OGCamera: NSObject, OGImageProvider {
     }
     
     private func deviceWithCameraPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
-        let devices = AVCaptureDevice.devices(for:AVMediaType.video)
-        for case let device in devices {
-            if (device.position == position) {
-                return device
-            }
+        
+        let session: AVCaptureDevice.DiscoverySession
+        
+        if #available(iOS 13.0, *) {
+            session = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
+        } else {
+            session = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
         }
         
-        return AVCaptureDevice.default(for: AVMediaType.video)
+        guard let device = session.devices.first else {
+            return AVCaptureDevice.default(for: AVMediaType.video)
+        }
+        return device
     }
 }
 
@@ -129,10 +135,8 @@ extension OGCamera: AVCaptureVideoDataOutputSampleBufferDelegate {
             guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
                 return
             }
-            let startTime = CFAbsoluteTimeGetCurrent()
             let bufferWidth = CVPixelBufferGetWidth(pixelBuffer)
             let bufferHeight = CVPixelBufferGetHeight(pixelBuffer)
-            let currentTime = CMSampleBufferGetPresentationTimeStamp(sampleBuffer)
             CVPixelBufferLockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue:CVOptionFlags(0)))
             
             if self.captureAsYUV {
@@ -156,12 +160,6 @@ extension OGCamera: AVCaptureVideoDataOutputSampleBufferDelegate {
                 glBindTexture(GLenum(GL_TEXTURE_2D), 0)
                 
                 cameraFramebuffer = OGEAGLContext.shared().framebufferCache.requestFrameBuffer(orentation: .portrait, size: CGSize(width: bufferWidth, height: bufferHeight), textureOnly: true, overridetexture: texture)
-                
-//                cameraFramebuffer.tag = "Use In Camera Capture"
-//
-//                glBindTexture(GLenum(GL_TEXTURE_2D), cameraFramebuffer.texture!)
-//                glTexImage2D(GLenum(GL_TEXTURE_2D), 0, GL_RGBA, GLsizei(bufferWidth), GLsizei(bufferHeight), 0, GLenum(GL_BGRA), GLenum(GL_UNSIGNED_BYTE), CVPixelBufferGetBaseAddress(pixelBuffer))
-//                glBindBuffer(GLenum(GL_TEXTURE_2D), 0)
             }
             
             CVPixelBufferUnlockBaseAddress(pixelBuffer, CVPixelBufferLockFlags(rawValue:CVOptionFlags(0)))
