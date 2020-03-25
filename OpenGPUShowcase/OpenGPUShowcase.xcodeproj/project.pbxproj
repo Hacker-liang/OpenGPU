@@ -30,6 +30,7 @@
 		6607DC132419D93900CC5C69 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC122419D93900CC5C69 /* CoreGraphics.framework */; };
 		6607DC152419D96800CC5C69 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC142419D96800CC5C69 /* UIKit.framework */; };
 		66801A3824205EB9006F7D1A /* OGBaseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66801A3724205EB9006F7D1A /* OGBaseFilter.swift */; };
+		66801A4124249A0B006F7D1A /* RGBFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66801A4024249A0B006F7D1A /* RGBFilter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		6607DC122419D93900CC5C69 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6607DC142419D96800CC5C69 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		66801A3724205EB9006F7D1A /* OGBaseFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OGBaseFilter.swift; sourceTree = "<group>"; };
+		66801A4024249A0B006F7D1A /* RGBFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBFilter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +139,7 @@
 				6607DBF32419D83100CC5C69 /* OpenGPU */,
 				6607DBC32419D7C800CC5C69 /* AppDelegate.swift */,
 				6607DBC72419D7C800CC5C69 /* ViewController.swift */,
+				66801A4024249A0B006F7D1A /* RGBFilter.swift */,
 				6607DBC92419D7C800CC5C69 /* Main.storyboard */,
 				6607DBCC2419D7D100CC5C69 /* Assets.xcassets */,
 				6607DBCE2419D7D100CC5C69 /* LaunchScreen.storyboard */,
@@ -364,6 +367,7 @@
 				6607DC062419D83100CC5C69 /* OGShaderLanguage.swift in Sources */,
 				6607DC022419D83100CC5C69 /* OGRenderView.swift in Sources */,
 				6607DC042419D83100CC5C69 /* OGPipeline.swift in Sources */,
+				66801A4124249A0B006F7D1A /* RGBFilter.swift in Sources */,
 				6607DC032419D83100CC5C69 /* OGRenderHelper.swift in Sources */,
 				6607DC052419D83100CC5C69 /* OGCamera.swift in Sources */,
 				6607DC0A2419D83100CC5C69 /* OGShaderProgram.swift in Sources */,

@@ -19,7 +19,6 @@ class OGBaseFilter: OGImageConsumer, OGImageProvider {
     
     private let shader: OGShaderProgram
     
-    
     init(shader: OGShaderProgram, numberOfInputs: UInt = 1) {
         self.maximumInputs = numberOfInputs
         self.shader = shader
@@ -28,7 +27,7 @@ class OGBaseFilter: OGImageConsumer, OGImageProvider {
     
     convenience init(vertexShader: String? = nil, fragmentShader: String, numberOfInput: UInt = 1) {
         
-        let shader = OGShaderProgram(vertexShaderString: vertexShader ?? OGShaderLanguage.vertex.shaderContent(), fragmentShaderString: fragmentShader)
+        let shader = OGEAGLContext.shared().programForVertext(vertexShader ?? OGShaderLanguage.vertex.vertextShaderContent(textureCount: Int(numberOfInput)), fragmentShader: fragmentShader)
         
         self.init(shader: shader, numberOfInputs: numberOfInput)
     }

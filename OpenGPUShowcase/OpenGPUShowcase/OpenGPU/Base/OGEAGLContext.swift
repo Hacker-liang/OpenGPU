@@ -26,6 +26,8 @@ class OGEAGLContext {
     
     let context: EAGLContext!
     
+    private var shaderProgramCache = [String: OGShaderProgram]()
+    
     lazy var framebufferCache: OGFramebufferCache = {
         return OGFramebufferCache(context: self)
     }()
@@ -46,6 +48,21 @@ class OGEAGLContext {
         EAGLContext.setCurrent(context)
         glDisable(GLenum(GL_DEPTH_TEST))
         glEnable(GLenum(GL_TEXTURE_2D))
+    }
+}
+
+extension OGEAGLContext {
+    public func programForVertext(_ vertextShader: String, fragmentShader: String) -> OGShaderProgram {
+        let key = "V: \(vertextShader) F: \(fragmentShader)"
+        if let shader = shaderProgramCache[key] {
+            return shader
+        }
+        
+        return runOperationSynchronously {
+            let shaderProgram = OGShaderProgram(vertexShaderString: vertextShader, fragmentShaderString: fragmentShader)
+            self.shaderProgramCache[key] = shaderProgram
+            return shaderProgram
+        }
     }
 }
 
@@ -86,6 +103,13 @@ extension OGEAGLContext {
                 operation()
             }
         }
-        
+    }
+    
+    func runOperationSynchronously<T>(_ operation: @escaping ()->T) -> T {
+        var returnedValue: T!
+        runOperationSynchronously {
+            returnedValue = operation()
+        }
+        return returnedValue
     }
 }

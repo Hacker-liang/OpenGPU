@@ -63,9 +63,6 @@ public class OGShaderProgram {
     
     private func compileShader(shaderString: String, type: OGShaderType) -> GLuint {
         let shader: GLuint
-        guard let char = shaderString.GLchar_Pointer() else {
-            return 0
-        }
         switch type {
         case .vertex:
             shader = glCreateShader(GLenum(GL_VERTEX_SHADER))
@@ -73,11 +70,41 @@ public class OGShaderProgram {
             shader = glCreateShader(GLenum(GL_FRAGMENT_SHADER))
         }
         
-        var tempString:UnsafePointer<GLchar>? = char
-        //加载shader
-        glShaderSource(shader, 1, &tempString, nil)
-        //编译shader
-        glCompileShader(shader)
+        if let valued = shaderString.cString(using:String.Encoding.utf8) {
+            let d = UnsafePointer<GLchar>(valued)
+            
+            var tempString: UnsafePointer<GLchar>? = d
+            //加载shader
+            glShaderSource(shader, 1, &tempString, nil)
+            //编译shader
+            glCompileShader(shader)
+            
+        } else {
+            fatalError("error glsl")
+        }
+        
+//        var tempString:UnsafePointer<GLchar>? = shaderString.GLchar_Pointer()
+//
+//        //加载shader
+//        glShaderSource(shader, 1, &tempString, nil)
+//        //编译shader
+//        glCompileShader(shader)
+        
+//        if let value = shaderString.cString(using:String.Encoding.utf8) {
+//            var tempString:UnsafePointer<GLchar>? = UnsafePointer<GLchar>(value)
+//            glShaderSource(shader, 1, &tempString, nil)
+//            glCompileShader(shader)
+//        } else {
+//            fatalError("Could not convert this string to UTF8: \(self)")
+//        }
+        
+//        shaderString.withGLChar{ glString in
+//            var tempString:UnsafePointer<GLchar>? = glString
+//            glShaderSource(shader, 1, &tempString, nil)
+//            glCompileShader(shader)
+//        }
+        
+        
         
         //检查编译结果
         var compileStatus: GLint = 1
@@ -170,7 +197,10 @@ extension OGShaderProgram {
             return l
         }
         var location: GLint = -1
-        location = glGetAttribLocation(self.program, attribute.GLchar_Pointer())
+        
+        attribute.withGLChar { (glString) in
+            location = glGetAttribLocation(self.program, glString)
+        }
         if location < 0 {
             return nil
         } else {
@@ -187,7 +217,10 @@ extension OGShaderProgram {
             return location
             
         } else {
-            let location: GLint = glGetUniformLocation(self.program, uniform.GLchar_Pointer())
+            var location: GLint = -1
+            uniform.withGLChar { (glString) in
+                location = glGetUniformLocation(self.program, glString)
+            }
             if location >= 0 {
                 uniformLocationInGPU[uniform] = location
                 return location
@@ -225,11 +258,12 @@ extension OGShaderProgram {
 }
 
 extension String {
-    func GLchar_Pointer() -> UnsafePointer<GLchar>? {
-        if let value = self.cString(using:String.Encoding.utf8) {
-            return UnsafePointer<GLchar>(value)
-        } else {
-            return nil
-        }
-    }
+    
+    func withGLChar(_ operation:(UnsafePointer<GLchar>) -> ()) {
+           if let value = self.cString(using:String.Encoding.utf8) {
+               operation(UnsafePointer<GLchar>(value))
+           } else {
+               fatalError("Could not convert this string to UTF8: \(self)")
+           }
+       }
 }

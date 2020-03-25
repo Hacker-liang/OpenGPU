@@ -32,11 +32,13 @@ class ViewController: UIViewController {
         self.view.addSubview(displayView)
         camera = OGCamera(capturePreset: AVCaptureSession.Preset.hd1280x720, cameraPosition: .back, captureAsYUV: false)
         
-        let filter = OGBaseFilter(vertexShader: nil, fragmentShader: FragmentShader, numberOfInput: 1)
+//        let filter = OGBaseFilter(vertexShader: ThreeInputVertexShader, fragmentShader: FragmentShader, numberOfInput: 2)
+        let filter = RGBFilter();
         
-        camera! --> filter --> displayView
+        camera?.addTarget(target: filter, atTargetIndex: 0)
         
         
+        filter --> displayView
     }
     
     override func viewDidAppear(_ animated: Bool) {
