@@ -39,6 +39,7 @@
 		669D1B022431EA680037B301 /* OMRender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669D1B012431EA680037B301 /* OMRender.swift */; };
 		669D1B052432CF3A0037B301 /* RenderPass.metal in Sources */ = {isa = PBXBuildFile; fileRef = 669D1B042432CF3A0037B301 /* RenderPass.metal */; };
 		66B3A948243331B300036858 /* OMBaseFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A947243331B300036858 /* OMBaseFilter.swift */; };
+		66B3A94A243587E400036858 /* OMBaseFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 66B3A949243587E400036858 /* OMBaseFilter.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		669D1B042432CF3A0037B301 /* RenderPass.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = RenderPass.metal; sourceTree = "<group>"; };
 		669D1B062432CF7E0037B301 /* MTLShaderTypes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTLShaderTypes.h; sourceTree = "<group>"; };
 		66B3A947243331B300036858 /* OMBaseFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMBaseFilter.swift; sourceTree = "<group>"; };
+		66B3A949243587E400036858 /* OMBaseFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OMBaseFilter.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +267,7 @@
 			isa = PBXGroup;
 			children = (
 				669D1B042432CF3A0037B301 /* RenderPass.metal */,
+				66B3A949243587E400036858 /* OMBaseFilter.metal */,
 				669D1B062432CF7E0037B301 /* MTLShaderTypes.h */,
 			);
 			path = MTL;
@@ -417,6 +420,7 @@
 				66801A4124249A0B006F7D1A /* RGBFilter.swift in Sources */,
 				6607DC032419D83100CC5C69 /* OGRenderHelper.swift in Sources */,
 				6607DC052419D83100CC5C69 /* OGCamera.swift in Sources */,
+				66B3A94A243587E400036858 /* OMBaseFilter.metal in Sources */,
 				6607DC0A2419D83100CC5C69 /* OGShaderProgram.swift in Sources */,
 				6655054F2431C7C800045191 /* OMPipline.swift in Sources */,
 				6607DC072419D83100CC5C69 /* OGEAGLContext.swift in Sources */,

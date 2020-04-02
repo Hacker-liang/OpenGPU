@@ -15,7 +15,6 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
     
     private var processPSO: MTLRenderPipelineState!
     private var commandQueue: MTLCommandQueue!
-    private var commandBuffer: MTLCommandBuffer!
 
     private var inputTextures = [UInt: OMTexture]()
     
@@ -25,41 +24,20 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
     
     private var renderSemaphore = DispatchSemaphore(value: 1)
     
-    init?(vertextFuncName: String, fragmentFuncName: String, maxTextureInputs: Int = 1) {
+    init(vertextFuncName: String, fragmentFuncName: String, maxTextureInputs: Int = 1) {
         
-        guard let library = OMRenderDevice.shared().device.makeDefaultLibrary() else {
-            return nil
-        }
-        guard let vertexFunc = library.makeFunction(name: vertextFuncName) else {
-            return nil
-        }
-        guard let fragmentFunc = library.makeFunction(name: fragmentFuncName) else {
-            return nil
-        }
+        processPSO = generateRenderPipelineStateObject(device: OMRenderDevice.shared(), vertexFuncName: vertextFuncName, fragmentFuncName: fragmentFuncName, operateName: "")
         
         guard let cq = OMRenderDevice.shared().device.makeCommandQueue() else {
-            return nil
+            fatalError("error create commandQueue")
         }
         
         commandQueue = cq
         
-        guard let commandBuffer = commandQueue.makeCommandBuffer() else {
-            return nil
-        }
-        self.commandBuffer = commandBuffer
-        
         self.maxTextureInputs = maxTextureInputs
         
         commandQueue = cq;
-        
-        let psd = MTLRenderPipelineDescriptor()
-        psd.vertexFunction = vertexFunc
-        psd.fragmentFunction = fragmentFunc
-        psd.label = "basefilter_pso"
-        guard let pso = try? OMRenderDevice.shared().device.makeRenderPipelineState(descriptor: psd) else {
-            return nil
-        }
-        processPSO = pso
+
     }
 
     func addTarget(target: OMImageConsumer) {
@@ -67,10 +45,10 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
     }
     
     func newTextureAvailable(texture: OMTexture, atIndex: UInt) {
-        let _ = renderSemaphore.wait(timeout: .distantFuture)
-        defer {
-            renderSemaphore.signal()
-        }
+//        let _ = renderSemaphore.wait(timeout: .distantFuture)
+//        defer {
+//            renderSemaphore.signal()
+//        }
         
         inputTextures[atIndex] = texture
         
@@ -79,8 +57,14 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
             let outputHeight = inputTextures[0]?.texture?.height else {
                 return
             }
+            
             let outputTexture = OMTexture(device: OMRenderDevice.shared().device, width: outputWidth, height: outputHeight, oreation: 0)
-            self.commandBuffer.renderQuda(pipelineState: self.processPSO, inputTextures: Array(inputTextures.values), outputTexture: outputTexture)
+            guard let commandBuffer = commandQueue?.makeCommandBuffer() else { return }
+
+            commandBuffer.renderQuda(pipelineState: self.processPSO, inputTextures: Array(inputTextures.values), outputTexture: outputTexture)
+            commandBuffer.commit()
+            
+            self.updateAllTargets(texture: outputTexture)
         }
     }
     

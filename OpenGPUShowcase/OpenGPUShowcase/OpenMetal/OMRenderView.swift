@@ -18,7 +18,7 @@ class OMRenderView: MTKView, OMImageConsumer {
     init(frame frameRect: CGRect) {
         super.init(frame: frameRect, device: OMRenderDevice.shared().device)
         self.device = OMRenderDevice.shared().device
-        self.renderPSO = generateRenderPipelineStateObject(device: OMRenderDevice.shared(), vertexFuncName: "commonVertextShader", fragmentFuncName: "commonFragmentShader", operateName: "")
+        self.renderPSO = generateRenderPipelineStateObject(device: OMRenderDevice.shared(), vertexFuncName: "oneInputVertexShader", fragmentFuncName: "commonFragmentShader", operateName: "")
         self.commandQueue = OMRenderDevice.shared().device.makeCommandQueue()
         enableSetNeedsDisplay = false
         isPaused = true

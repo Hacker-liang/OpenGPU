@@ -27,10 +27,10 @@ extension MTLCommandBuffer {
             renderPass.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 1)
             renderPass.colorAttachments[0].storeAction = .store
             renderPass.colorAttachments[0].loadAction = .clear
+        
         } else {
             renderPass = renderPassDescriptor!
         }
-        
         guard let renderEncoder = self.makeRenderCommandEncoder(descriptor: renderPass) else {
             fatalError("error create commandEncoder")
         }

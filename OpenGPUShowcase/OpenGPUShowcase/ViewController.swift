@@ -32,10 +32,13 @@ class ViewController: UIViewController {
         self.view.addSubview(displayView)
         camera = OMCamera(capturePreset: AVCaptureSession.Preset.hd1280x720, cameraPosition: .back, captureAsYUV: false)
         
+        let fileter = OMBaseFilter(vertextFuncName: "oneInputVertexShader", fragmentFuncName: "commonFragmentShader")
+        camera?.addTarget(target: fileter)
+        
         displayView = OMRenderView(frame: self.view.bounds)
         self.view.addSubview(displayView)
         
-        camera?.addTarget(target: displayView)
+        fileter.addTarget(target: displayView)
         
     }
     

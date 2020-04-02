@@ -18,11 +18,15 @@ class OMTexture {
     }
     
     init(device: MTLDevice, width: Int, height: Int, oreation: Int) {
-        let textureDesc = MTLTextureDescriptor()
-        textureDesc.width = width
-        textureDesc.height = height
-        textureDesc.pixelFormat = .bgra8Unorm
-        textureDesc.usage = [.renderTarget, .shaderRead, .shaderWrite]
-        self.texture = device.makeTexture(descriptor: textureDesc)
+         let textureDescriptor = MTLTextureDescriptor.texture2DDescriptor(pixelFormat: .bgra8Unorm,
+                                                                                width: width,
+                                                                                height: height,
+                                                                                mipmapped: false)
+        textureDescriptor.usage = [.renderTarget, .shaderRead, .shaderWrite]
+
+        self.texture = device.makeTexture(descriptor: textureDescriptor)
+        if self.texture == nil {
+            print("texture nil")
+        }
     }
 }
