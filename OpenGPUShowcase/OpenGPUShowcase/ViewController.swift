@@ -22,24 +22,23 @@ void main()
 
 class ViewController: UIViewController {
     
-    private var camera: OGCamera?
-    private var displayView: OGRenderView!
+    private var camera: OMCamera?
+    private var displayView: OMRenderView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        displayView = OGRenderView(frame: self.view.bounds)
+        displayView = OMRenderView(frame: self.view.bounds)
         self.view.addSubview(displayView)
-        camera = OGCamera(capturePreset: AVCaptureSession.Preset.hd1280x720, cameraPosition: .back, captureAsYUV: false)
+        camera = OMCamera(capturePreset: AVCaptureSession.Preset.hd1280x720, cameraPosition: .back, captureAsYUV: false)
         
-//        let filter = OGBaseFilter(vertexShader: ThreeInputVertexShader, fragmentShader: FragmentShader, numberOfInput: 2)
-        let filter = RGBFilter();
+        displayView = OMRenderView(frame: self.view.bounds)
+        self.view.addSubview(displayView)
         
-        camera?.addTarget(target: filter, atTargetIndex: 0)
+        camera?.addTarget(target: displayView)
         
-        
-        filter --> displayView
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
