@@ -1,0 +1,533 @@
+\hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e}{}\section{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE Struct Reference}
+\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e}\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+
+
+人脸算法函数集合  
+
+
+
+
+{\ttfamily \#include $<$M\+G\+\_\+\+Facepp.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ae5b4677b247cb0c7a882b2542491e0d9}{Create\+Api\+Handle} )(const M\+G\+\_\+\+B\+Y\+TE $\ast$model\+\_\+data, M\+G\+\_\+\+I\+N\+T32 model\+\_\+length, \hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} \+\_\+\+O\+UT $\ast$api\+\_\+handle\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em 创建人脸算法句柄（handle） \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a06beec1e5183bf9972c7cd35f9d7a571}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a06beec1e5183bf9972c7cd35f9d7a571}} 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ {\bfseries Create\+Api\+Handle\+With\+Max\+Face\+Count} )(const M\+G\+\_\+\+B\+Y\+TE $\ast$model\+\_\+data, M\+G\+\_\+\+I\+N\+T32 model\+\_\+length, M\+G\+\_\+\+I\+N\+T32 max\+Face\+Count, \hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} \+\_\+\+O\+UT $\ast$api\+\_\+handle\+\_\+ptr)
+\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aff5d16c86e8aa3351cc29ca77c0ad56a}{Release\+Api\+Handle} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em 释放人脸算法句柄（handle） \end{DoxyCompactList}\item 
+const char $\ast$($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a497695046f1a90d2a400809e0b0816cd}{Get\+Jenkins\+Number} )()
+\begin{DoxyCompactList}\small\item\em 获取算法版本信息 \end{DoxyCompactList}\item 
+const char $\ast$($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4cf47a795262d042f354d8ad821109e1}{Get\+Api\+Version} )()
+\begin{DoxyCompactList}\small\item\em 获取算法版本信息 \end{DoxyCompactList}\item 
+M\+G\+\_\+\+U\+I\+N\+T64($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a11165d90b7733e6ec43cbec1af262103}{Get\+Api\+Expiration} )()
+\begin{DoxyCompactList}\small\item\em 查看算法授权的过期时间 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a3ee48a4a8bc6440c8f21fae5dfcded4c}{M\+G\+\_\+\+S\+D\+K\+A\+U\+T\+H\+T\+Y\+PE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ab3b9b8c4411b9a2127848548483aab9d}{Get\+S\+D\+K\+Auth\+Type} )()
+\begin{DoxyCompactList}\small\item\em 获取 S\+DK 的授权类型 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1dc56210a071c3fa450ce279b36e80aa}{Get\+Detect\+Config} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{struct_m_g___f_p_p___a_p_i_c_o_n_f_i_g}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+C\+O\+N\+F\+IG} \+\_\+\+O\+UT $\ast$config)
+\begin{DoxyCompactList}\small\item\em 获取当前算法的配置信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2a02ef224d07da6eadd59bca70e17bdf}{Set\+Detect\+Config} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, const \hyperlink{struct_m_g___f_p_p___a_p_i_c_o_n_f_i_g}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+C\+O\+N\+F\+IG} $\ast$config)
+\begin{DoxyCompactList}\small\item\em 设置算法配置信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa548373446fe877be6a50973e7178702}{Detect} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 \+\_\+\+O\+UT $\ast$face\+\_\+nr)
+\begin{DoxyCompactList}\small\item\em 检测图像中的人脸 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_add105d08334445cdbe3804e14ed87fe3}{Get\+Face\+Info} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, \hyperlink{struct_m_g___f_a_c_e}{M\+G\+\_\+\+F\+A\+CE} \+\_\+\+O\+UT $\ast$face)
+\begin{DoxyCompactList}\small\item\em 获取人脸信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a116f91f24bb127f395deb45e9a4f4c73}{Get\+Landmark} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+B\+O\+OL is\+\_\+smooth, M\+G\+\_\+\+I\+N\+T32 nr, \hyperlink{struct_m_g___p_o_i_n_t}{M\+G\+\_\+\+P\+O\+I\+NT} \+\_\+\+O\+UT $\ast$points)
+\begin{DoxyCompactList}\small\item\em 获取人脸关键点信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1c21a2f447a69abb3a99c73e82b27b10}{Get\+Rect} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+B\+O\+OL is\+\_\+smooth, \hyperlink{struct_m_g___d_e_t_e_c_t___r_e_c_t}{M\+G\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+E\+CT} \+\_\+\+O\+UT $\ast$rect)
+\begin{DoxyCompactList}\small\item\em 获取人脸框信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4ac56d3f28fcb18a97bbbf847d38b2d3}{Get\+Attribute} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+I\+N\+T32 attribute\+\_\+mode, \hyperlink{struct_m_g___f_a_c_e}{M\+G\+\_\+\+F\+A\+CE} \+\_\+\+O\+UT $\ast$face)
+\begin{DoxyCompactList}\small\item\em 计算一张人脸的属性 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a77438b4530db1a84ce47ef285fd4129f}{Create\+Image\+Handle} )(M\+G\+\_\+\+I\+N\+T32 width, M\+G\+\_\+\+I\+N\+T32 height, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} \+\_\+\+O\+UT $\ast$image\+\_\+handle\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em 创建图像句柄（handle） \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaea1483d888a49599be430406ea1b800}{Set\+Image\+Data} )(\hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, const M\+G\+\_\+\+B\+Y\+TE $\ast$image\+\_\+data, \hyperlink{_m_g___common_8h_a27c660892b89a8f3b21116d59164d792}{M\+G\+\_\+\+I\+M\+A\+G\+E\+M\+O\+DE} image\+\_\+mode)
+\begin{DoxyCompactList}\small\item\em 设置图像数据 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaadd12cc76f4cf18ed48a5f9f3bc8bfc}{Release\+Image\+Handle} )(\hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em 释放图像句柄（handle） \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a0a7a742dce1d56702cce167e818fc06c}{Extract\+Feature} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+I\+N\+T32 $\ast$\+\_\+\+O\+UT feature\+\_\+length\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em 抽取人脸特征 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa8ba34245d853387adfd47b2e18484fc}{Get\+Feature\+Data} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, void \+\_\+\+O\+UT $\ast$feature\+\_\+data, M\+G\+\_\+\+I\+N\+T32 feature\+\_\+length)
+\begin{DoxyCompactList}\small\item\em 获取人脸特征数据 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ad4dfe5f8f35f050cf21d003644c3826b}{Face\+Compare} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, const void $\ast$feature\+\_\+data1, const void $\ast$feature\+\_\+data2, M\+G\+\_\+\+I\+N\+T32 feature\+\_\+length, M\+G\+\_\+\+D\+O\+U\+B\+LE \+\_\+\+O\+UT $\ast$score\+\_\+ptr)
+\begin{DoxyCompactList}\small\item\em 获取人脸比对的分数 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a53c43385e1f5bcc26e8125a382c2a167}{Reset\+Track} )(\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em 清除当前track模式下的缓存信息 \end{DoxyCompactList}\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2cebfbb2b3e714afc92d1005f3f13ef9}{Shut\+Down} )()
+\item 
+\hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ \hyperlink{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a13fb26a5883eef5e0b9d1f4a63741740}{Get\+Algorithm\+Info} )(const M\+G\+\_\+\+B\+Y\+TE $\ast$model\+\_\+data, M\+G\+\_\+\+I\+N\+T32 model\+\_\+length, \hyperlink{struct_m_g___a_l_g_o_r_i_t_h_m_i_n_f_o}{M\+G\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+I\+N\+FO} $\ast$algorithm\+\_\+info)
+\begin{DoxyCompactList}\small\item\em 获取\+S\+D\+K信息 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+人脸算法函数集合 
+
+所有的算法函数都表示为该类型的一个变量，可以用形如： mg\+\_\+facepp.\+Function(...) 的形式进行调用。 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ae5b4677b247cb0c7a882b2542491e0d9}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ae5b4677b247cb0c7a882b2542491e0d9}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Create\+Api\+Handle@{Create\+Api\+Handle}}
+\index{Create\+Api\+Handle@{Create\+Api\+Handle}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Create\+Api\+Handle}{CreateApiHandle}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Create\+Api\+Handle) (const M\+G\+\_\+\+B\+Y\+TE $\ast$model\+\_\+data, M\+G\+\_\+\+I\+N\+T32 model\+\_\+length, \hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} \+\_\+\+O\+UT $\ast$api\+\_\+handle\+\_\+ptr)}
+
+
+
+创建人脸算法句柄（handle） 
+
+传入算法模型数据，创建一个算法句柄。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em env} & Android jni 的环境变量，仅在 Android S\+DK 中使用 \\
+\hline
+\mbox{\tt in}  & {\em jobj} & Android 调用的上下文，仅在 Android S\+DK 中使用 \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+data} & 算法模型的二进制数据 \\
+\hline
+\mbox{\tt in}  & {\em model\+\_\+length} & 算法模型的字节长度\\
+\hline
+\mbox{\tt out}  & {\em api\+\_\+handle\+\_\+ptr} & 算法句柄的指针，成功创建后会修改其值\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a77438b4530db1a84ce47ef285fd4129f}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a77438b4530db1a84ce47ef285fd4129f}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Create\+Image\+Handle@{Create\+Image\+Handle}}
+\index{Create\+Image\+Handle@{Create\+Image\+Handle}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Create\+Image\+Handle}{CreateImageHandle}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Create\+Image\+Handle) (M\+G\+\_\+\+I\+N\+T32 width, M\+G\+\_\+\+I\+N\+T32 height, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} \+\_\+\+O\+UT $\ast$image\+\_\+handle\+\_\+ptr)}
+
+
+
+创建图像句柄（handle） 
+
+图像句柄是表示的是一张图像，创建时需要确定其宽和高，且后续不能修改。 如果是对连续的视频图像进行图像检测，可以使用同一个图像句柄，而不用反复释放。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em width} & 图像的宽 \\
+\hline
+\mbox{\tt in}  & {\em height} & 图像的高\\
+\hline
+\mbox{\tt out}  & {\em image\+\_\+handle\+\_\+ptr} & 图像句柄的指针，成功创建后会修改其值\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa548373446fe877be6a50973e7178702}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa548373446fe877be6a50973e7178702}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Detect@{Detect}}
+\index{Detect@{Detect}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Detect}{Detect}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Detect) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 \+\_\+\+O\+UT $\ast$face\+\_\+nr)}
+
+
+
+检测图像中的人脸 
+
+检测一张图像，并返回检测到的人脸个数。 人脸检测使用的是灰度图，传入灰度的图像数据可以减少算法做图像格式转换的时间。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+handle} & 图像句柄\\
+\hline
+\mbox{\tt out}  & {\em face\+\_\+nr} & 检测到的人脸个数，人脸以0$\sim$face\+\_\+nr-\/1编号。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a0a7a742dce1d56702cce167e818fc06c}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a0a7a742dce1d56702cce167e818fc06c}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Extract\+Feature@{Extract\+Feature}}
+\index{Extract\+Feature@{Extract\+Feature}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Extract\+Feature}{ExtractFeature}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Extract\+Feature) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+I\+N\+T32 $\ast$\+\_\+\+O\+UT feature\+\_\+length\+\_\+ptr)}
+
+
+
+抽取人脸特征 
+
+抽取图像中特定人脸的特征，特征以单精度浮点数存储
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+handle} & 图像句柄 \\
+\hline
+\mbox{\tt in}  & {\em idx} & 人脸编号（人脸以0$\sim$face\+\_\+nr-\/1编号）\\
+\hline
+\mbox{\tt out}  & {\em feature\+\_\+length\+\_\+ptr} & 存储特征需要的单精度浮点数长度\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ad4dfe5f8f35f050cf21d003644c3826b}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ad4dfe5f8f35f050cf21d003644c3826b}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Face\+Compare@{Face\+Compare}}
+\index{Face\+Compare@{Face\+Compare}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Face\+Compare}{FaceCompare}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Face\+Compare) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, const void $\ast$feature\+\_\+data1, const void $\ast$feature\+\_\+data2, M\+G\+\_\+\+I\+N\+T32 feature\+\_\+length, M\+G\+\_\+\+D\+O\+U\+B\+LE \+\_\+\+O\+UT $\ast$score\+\_\+ptr)}
+
+
+
+获取人脸比对的分数 
+
+传入两个特征，比对两个特征后产生对应分数。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em feature\+\_\+data1} & 参与比对的特征1 \\
+\hline
+\mbox{\tt in}  & {\em feature\+\_\+data2} & 参与比对的特征2 \\
+\hline
+\mbox{\tt in}  & {\em feature\+\_\+length} & 特征的长度，通过 Extract\+Feature 函数获得\\
+\hline
+\mbox{\tt out}  & {\em score\+\_\+ptr} & 人脸比对的分数\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a13fb26a5883eef5e0b9d1f4a63741740}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a13fb26a5883eef5e0b9d1f4a63741740}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Algorithm\+Info@{Get\+Algorithm\+Info}}
+\index{Get\+Algorithm\+Info@{Get\+Algorithm\+Info}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Algorithm\+Info}{GetAlgorithmInfo}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Algorithm\+Info) (const M\+G\+\_\+\+B\+Y\+TE $\ast$model\+\_\+data, M\+G\+\_\+\+I\+N\+T32 model\+\_\+length, \hyperlink{struct_m_g___a_l_g_o_r_i_t_h_m_i_n_f_o}{M\+G\+\_\+\+A\+L\+G\+O\+R\+I\+T\+H\+M\+I\+N\+FO} $\ast$algorithm\+\_\+info)}
+
+
+
+获取\+S\+D\+K信息 
+
+S\+DK 授权类型 离线授权 联网授权 S\+DK 过期时间 联网授权版返回 0，请通过联网授权\+A\+P\+I获取过期日期 S\+DK 支持的能力 S\+DK 限制的报名 \mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a11165d90b7733e6ec43cbec1af262103}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a11165d90b7733e6ec43cbec1af262103}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Api\+Expiration@{Get\+Api\+Expiration}}
+\index{Get\+Api\+Expiration@{Get\+Api\+Expiration}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Api\+Expiration}{GetApiExpiration}}
+{\footnotesize\ttfamily M\+G\+\_\+\+U\+I\+N\+T64($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Api\+Expiration) ()}
+
+
+
+查看算法授权的过期时间 
+
+此接口已经废弃，只返回0， 请使用 Get\+Algorithm\+Info
+
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4cf47a795262d042f354d8ad821109e1}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4cf47a795262d042f354d8ad821109e1}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Api\+Version@{Get\+Api\+Version}}
+\index{Get\+Api\+Version@{Get\+Api\+Version}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Api\+Version}{GetApiVersion}}
+{\footnotesize\ttfamily const char$\ast$($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Api\+Version) ()}
+
+
+
+获取算法版本信息 
+
+\begin{DoxyReturn}{Returns}
+返回一个字符串，表示算法版本号 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4ac56d3f28fcb18a97bbbf847d38b2d3}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a4ac56d3f28fcb18a97bbbf847d38b2d3}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Attribute@{Get\+Attribute}}
+\index{Get\+Attribute@{Get\+Attribute}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Attribute}{GetAttribute}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Attribute) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+I\+N\+T32 attribute\+\_\+mode, \hyperlink{struct_m_g___f_a_c_e}{M\+G\+\_\+\+F\+A\+CE} \+\_\+\+O\+UT $\ast$face)}
+
+
+
+计算一张人脸的属性 
+
+通过attribute\+\_\+mode控制计算哪些人脸属性，将计算的结果写入到face的具体字段当中。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+handle} & 图像句柄 \\
+\hline
+\mbox{\tt in}  & {\em idx} & 人脸编号（人脸以0$\sim$face\+\_\+nr-\/1编号） \\
+\hline
+\mbox{\tt in}  & {\em attribute\+\_\+mode} & 需要计算的属性类型，将需要计算的属性用或（\char`\"{}$\vert$\char`\"{}）符号链接，传入即可\\
+\hline
+\mbox{\tt out}  & {\em face} & 人脸信息，根据 attribute\+\_\+mode 的不同，会计算对应人脸属性。\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1dc56210a071c3fa450ce279b36e80aa}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1dc56210a071c3fa450ce279b36e80aa}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Detect\+Config@{Get\+Detect\+Config}}
+\index{Get\+Detect\+Config@{Get\+Detect\+Config}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Detect\+Config}{GetDetectConfig}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Detect\+Config) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, \hyperlink{struct_m_g___f_p_p___a_p_i_c_o_n_f_i_g}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+C\+O\+N\+F\+IG} \+\_\+\+O\+UT $\ast$config)}
+
+
+
+获取当前算法的配置信息 
+
+获取算法句柄对应的配置信息。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄\\
+\hline
+\mbox{\tt out}  & {\em config} & 算法配置信息\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_add105d08334445cdbe3804e14ed87fe3}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_add105d08334445cdbe3804e14ed87fe3}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Face\+Info@{Get\+Face\+Info}}
+\index{Get\+Face\+Info@{Get\+Face\+Info}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Face\+Info}{GetFaceInfo}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Face\+Info) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, \hyperlink{struct_m_g___f_a_c_e}{M\+G\+\_\+\+F\+A\+CE} \+\_\+\+O\+UT $\ast$face)}
+
+
+
+获取人脸信息 
+
+通过人脸标号获取人脸信息。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em idx} & 人脸编号（人脸以0$\sim$face\+\_\+nr-\/1编号） \\
+\hline
+\mbox{\tt out}  & {\em face} & 人脸信息\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa8ba34245d853387adfd47b2e18484fc}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aa8ba34245d853387adfd47b2e18484fc}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Feature\+Data@{Get\+Feature\+Data}}
+\index{Get\+Feature\+Data@{Get\+Feature\+Data}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Feature\+Data}{GetFeatureData}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Feature\+Data) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, void \+\_\+\+O\+UT $\ast$feature\+\_\+data, M\+G\+\_\+\+I\+N\+T32 feature\+\_\+length)}
+
+
+
+获取人脸特征数据 
+
+在调用 Extract\+Feature 后，调用此函数获取特征数据
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em feature\+\_\+length} & 特征的长度，通过 Extract\+Feature 函数获得\\
+\hline
+\mbox{\tt out}  & {\em feature\+\_\+data} & 人脸特征数据，务必保证其内存大小不低于 feature\+\_\+length\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a497695046f1a90d2a400809e0b0816cd}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a497695046f1a90d2a400809e0b0816cd}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Jenkins\+Number@{Get\+Jenkins\+Number}}
+\index{Get\+Jenkins\+Number@{Get\+Jenkins\+Number}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Jenkins\+Number}{GetJenkinsNumber}}
+{\footnotesize\ttfamily const char$\ast$($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Jenkins\+Number) ()}
+
+
+
+获取算法版本信息 
+
+\begin{DoxyReturn}{Returns}
+返回一个字符串，表示 S\+DK buidl时的jenkins号 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a116f91f24bb127f395deb45e9a4f4c73}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a116f91f24bb127f395deb45e9a4f4c73}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Landmark@{Get\+Landmark}}
+\index{Get\+Landmark@{Get\+Landmark}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Landmark}{GetLandmark}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Landmark) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+B\+O\+OL is\+\_\+smooth, M\+G\+\_\+\+I\+N\+T32 nr, \hyperlink{struct_m_g___p_o_i_n_t}{M\+G\+\_\+\+P\+O\+I\+NT} \+\_\+\+O\+UT $\ast$points)}
+
+
+
+获取人脸关键点信息 
+
+可以通过参数控制，获取不同个数的关键点，也可以获取平滑过的关键点。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em idx} & 人脸编号（人脸以0$\sim$face\+\_\+nr-\/1编号） \\
+\hline
+\mbox{\tt in}  & {\em is\+\_\+smooth} & 是否需要进行平滑处理。选择平滑处理可以让前后帧关键点相对比较稳定。 \\
+\hline
+\mbox{\tt in}  & {\em nr} & 获取的关键点个数，目前只有3种数值是合理的，分别是81点、101点和106点。\\
+\hline
+\mbox{\tt out}  & {\em points} & 获取的人脸关键点\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1c21a2f447a69abb3a99c73e82b27b10}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a1c21a2f447a69abb3a99c73e82b27b10}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+Rect@{Get\+Rect}}
+\index{Get\+Rect@{Get\+Rect}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+Rect}{GetRect}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+Rect) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, M\+G\+\_\+\+I\+N\+T32 idx, M\+G\+\_\+\+B\+O\+OL is\+\_\+smooth, \hyperlink{struct_m_g___d_e_t_e_c_t___r_e_c_t}{M\+G\+\_\+\+D\+E\+T\+E\+C\+T\+\_\+\+R\+E\+CT} \+\_\+\+O\+UT $\ast$rect)}
+
+
+
+获取人脸框信息 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em idx} & 人脸框编号（人脸以0$\sim$face\+\_\+nr-\/1编号） \\
+\hline
+\mbox{\tt in}  & {\em is\+\_\+smooth} & 是否需要进行平滑处理。选择平滑处理可以让前后帧关键点相对比较稳定。\\
+\hline
+\mbox{\tt out}  & {\em rect} & 获取的人脸框\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ab3b9b8c4411b9a2127848548483aab9d}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_ab3b9b8c4411b9a2127848548483aab9d}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Get\+S\+D\+K\+Auth\+Type@{Get\+S\+D\+K\+Auth\+Type}}
+\index{Get\+S\+D\+K\+Auth\+Type@{Get\+S\+D\+K\+Auth\+Type}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Get\+S\+D\+K\+Auth\+Type}{GetSDKAuthType}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a3ee48a4a8bc6440c8f21fae5dfcded4c}{M\+G\+\_\+\+S\+D\+K\+A\+U\+T\+H\+T\+Y\+PE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Get\+S\+D\+K\+Auth\+Type) ()}
+
+
+
+获取 S\+DK 的授权类型 
+
+此接口已经废弃，只返回非联网授权， 请使用 Get\+Algorithm\+Info
+
+\begin{DoxyReturn}{Returns}
+只有联网授权和非联网授权两种类型 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aff5d16c86e8aa3351cc29ca77c0ad56a}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aff5d16c86e8aa3351cc29ca77c0ad56a}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Release\+Api\+Handle@{Release\+Api\+Handle}}
+\index{Release\+Api\+Handle@{Release\+Api\+Handle}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Release\+Api\+Handle}{ReleaseApiHandle}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Release\+Api\+Handle) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle)}
+
+
+
+释放人脸算法句柄（handle） 
+
+释放一个算法句柄。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 人脸算法句柄\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaadd12cc76f4cf18ed48a5f9f3bc8bfc}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaadd12cc76f4cf18ed48a5f9f3bc8bfc}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Release\+Image\+Handle@{Release\+Image\+Handle}}
+\index{Release\+Image\+Handle@{Release\+Image\+Handle}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Release\+Image\+Handle}{ReleaseImageHandle}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Release\+Image\+Handle) (\hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle)}
+
+
+
+释放图像句柄（handle） 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image\+\_\+handle} & 图像句柄\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a53c43385e1f5bcc26e8125a382c2a167}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a53c43385e1f5bcc26e8125a382c2a167}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Reset\+Track@{Reset\+Track}}
+\index{Reset\+Track@{Reset\+Track}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Reset\+Track}{ResetTrack}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Reset\+Track) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle)}
+
+
+
+清除当前track模式下的缓存信息 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2a02ef224d07da6eadd59bca70e17bdf}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2a02ef224d07da6eadd59bca70e17bdf}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Set\+Detect\+Config@{Set\+Detect\+Config}}
+\index{Set\+Detect\+Config@{Set\+Detect\+Config}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Set\+Detect\+Config}{SetDetectConfig}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Set\+Detect\+Config) (\hyperlink{_m_g___facepp_8h_ada15f635ef909e9aca52824dd580da40}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+H\+A\+N\+D\+LE} api\+\_\+handle, const \hyperlink{struct_m_g___f_p_p___a_p_i_c_o_n_f_i_g}{M\+G\+\_\+\+F\+P\+P\+\_\+\+A\+P\+I\+C\+O\+N\+F\+IG} $\ast$config)}
+
+
+
+设置算法配置信息 
+
+将算法的配置信息设置到算法句柄中。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em api\+\_\+handle} & 算法句柄 \\
+\hline
+\mbox{\tt in}  & {\em config} & 算法配置信息\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaea1483d888a49599be430406ea1b800}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_aaea1483d888a49599be430406ea1b800}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Set\+Image\+Data@{Set\+Image\+Data}}
+\index{Set\+Image\+Data@{Set\+Image\+Data}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Set\+Image\+Data}{SetImageData}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Set\+Image\+Data) (\hyperlink{_m_g___facepp_8h_a3492210206745444514ed588709ea666}{M\+G\+\_\+\+F\+P\+P\+\_\+\+I\+M\+A\+G\+E\+H\+A\+N\+D\+LE} image\+\_\+handle, const M\+G\+\_\+\+B\+Y\+TE $\ast$image\+\_\+data, \hyperlink{_m_g___common_8h_a27c660892b89a8f3b21116d59164d792}{M\+G\+\_\+\+I\+M\+A\+G\+E\+M\+O\+DE} image\+\_\+mode)}
+
+
+
+设置图像数据 
+
+传图的图像数据的内存，需要保证在图像句柄被释放前都是有效的。 如果一个图像句柄被反复调用该函数，则以最后一次设置的图像数据为准，且不会再用到上一次设置的数据。
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em image\+\_\+handle} & 图像句柄 \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+data} & 图像数据，其大小应该有图像大小及格式决定。 （如：一张\+Y\+U\+V的图，其数据大小应该为witdh$\ast$height$\ast$1.5，且witdh和height必须都是2的倍数） \\
+\hline
+\mbox{\tt in}  & {\em image\+\_\+mode} & 图像格式\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2cebfbb2b3e714afc92d1005f3f13ef9}\label{struct_m_g___f_a_c_e_p_p___a_p_i___f_u_n_c_t_i_o_n_s___t_y_p_e_a2cebfbb2b3e714afc92d1005f3f13ef9}} 
+\index{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}!Shut\+Down@{Shut\+Down}}
+\index{Shut\+Down@{Shut\+Down}!M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE@{M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+PE}}
+\subsubsection{\texorpdfstring{Shut\+Down}{ShutDown}}
+{\footnotesize\ttfamily \hyperlink{_m_g___common_8h_a38fecb61b8c39592ddb51f75d4a5c5e7}{M\+G\+\_\+\+R\+E\+T\+C\+O\+DE}($\ast$ M\+G\+\_\+\+F\+A\+C\+E\+P\+P\+\_\+\+A\+P\+I\+\_\+\+F\+U\+N\+C\+T\+I\+O\+N\+S\+\_\+\+T\+Y\+P\+E\+::\+Shut\+Down) ()}
+
+释放算法资源
+
+算法在计算时需要占用一些内存资源，必须在所有算法的句柄（handle）被释放后再调用 \begin{DoxyReturn}{Returns}
+成功则返回 M\+G\+\_\+\+R\+E\+T\+C\+O\+D\+E\+\_\+\+OK 
+\end{DoxyReturn}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/binghezhouke/\+Documents/deploy/workspace/\+P\+R\+O\+D\+U\+C\+T\+\_\+\+Megvii\+Facepp\+\_\+master\+\_\+0.\+5.\+2-\/online-\/landmark/megfacev2adapter/include/\hyperlink{_m_g___facepp_8h}{M\+G\+\_\+\+Facepp.\+h}\end{DoxyCompactItemize}

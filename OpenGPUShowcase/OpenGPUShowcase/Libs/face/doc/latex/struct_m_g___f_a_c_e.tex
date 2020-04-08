@@ -1,0 +1,73 @@
+\hypertarget{struct_m_g___f_a_c_e}{}\section{M\+G\+\_\+\+F\+A\+CE Struct Reference}
+\label{struct_m_g___f_a_c_e}\index{M\+G\+\_\+\+F\+A\+CE@{M\+G\+\_\+\+F\+A\+CE}}
+
+
+记录人脸信息的类型  
+
+
+
+
+{\ttfamily \#include $<$M\+G\+\_\+\+Common.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+M\+G\+\_\+\+I\+N\+T32 \hyperlink{struct_m_g___f_a_c_e_a71e1f0316c4696a7a98bd2dfb7b817e0}{track\+\_\+id}
+\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_ac6790410b21dead51c8c87924df5ca7e}\label{struct_m_g___f_a_c_e_ac6790410b21dead51c8c87924df5ca7e}} 
+\hyperlink{struct_m_g___r_e_c_t_a_n_g_l_e}{M\+G\+\_\+\+R\+E\+C\+T\+A\+N\+G\+LE} \hyperlink{struct_m_g___f_a_c_e_ac6790410b21dead51c8c87924df5ca7e}{rect}
+\begin{DoxyCompactList}\small\item\em 人脸在图像中的位置，以一个矩形框来刻画。 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_ae71833422ba21bf764407e1a7153ab31}\label{struct_m_g___f_a_c_e_ae71833422ba21bf764407e1a7153ab31}} 
+\hyperlink{struct_m_g___f_a_c_e_l_a_n_d_m_a_r_k_s}{M\+G\+\_\+\+F\+A\+C\+E\+L\+A\+N\+D\+M\+A\+R\+KS} \hyperlink{struct_m_g___f_a_c_e_ae71833422ba21bf764407e1a7153ab31}{points}
+\begin{DoxyCompactList}\small\item\em 人脸关键点信息。 \end{DoxyCompactList}\item 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_ab61f801c8d14f8686654facb639bb763}{confidence}
+\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_ad83ae3bee9efa82f1960e142cb4eef23}\label{struct_m_g___f_a_c_e_ad83ae3bee9efa82f1960e142cb4eef23}} 
+\hyperlink{struct_m_g__3_d_p_o_s_e}{M\+G\+\_\+3\+D\+P\+O\+SE} \hyperlink{struct_m_g___f_a_c_e_ad83ae3bee9efa82f1960e142cb4eef23}{pose}
+\begin{DoxyCompactList}\small\item\em 人脸三维旋转角度。 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a9f5b81b861b377e823551e0d6d6abc21}\label{struct_m_g___f_a_c_e_a9f5b81b861b377e823551e0d6d6abc21}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a9f5b81b861b377e823551e0d6d6abc21}{left\+\_\+eyestatus} \mbox{[}\hyperlink{_m_g___common_8h_a4aa0d12dd778dc35ae641fae82bba709a9fa5b4b92a7ba2db381a8c319935971c}{M\+G\+\_\+\+E\+Y\+E\+S\+T\+A\+T\+U\+S\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 人左眼状态，每个数值表示概率，总和为 1 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a3e138a0223d38abf7584027ad6f1a33b}\label{struct_m_g___f_a_c_e_a3e138a0223d38abf7584027ad6f1a33b}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a3e138a0223d38abf7584027ad6f1a33b}{right\+\_\+eyestatus} \mbox{[}\hyperlink{_m_g___common_8h_a4aa0d12dd778dc35ae641fae82bba709a9fa5b4b92a7ba2db381a8c319935971c}{M\+G\+\_\+\+E\+Y\+E\+S\+T\+A\+T\+U\+S\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 人右眼状态，每个数值表示概率，总和为 1 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a3d19097bbf869fd10db78b7e05c7c34d}\label{struct_m_g___f_a_c_e_a3d19097bbf869fd10db78b7e05c7c34d}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a3d19097bbf869fd10db78b7e05c7c34d}{age}
+\begin{DoxyCompactList}\small\item\em 年龄，为浮点数 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a806bfdfc3668813603bee43a6955df99}\label{struct_m_g___f_a_c_e_a806bfdfc3668813603bee43a6955df99}} 
+\hyperlink{struct_m_g___g_e_n_d_e_r}{M\+G\+\_\+\+G\+E\+N\+D\+ER} \hyperlink{struct_m_g___f_a_c_e_a806bfdfc3668813603bee43a6955df99}{gender}
+\begin{DoxyCompactList}\small\item\em 性别 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a87b32a9b945bb6e710240d6dc23172e9}\label{struct_m_g___f_a_c_e_a87b32a9b945bb6e710240d6dc23172e9}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a87b32a9b945bb6e710240d6dc23172e9}{blurness}
+\begin{DoxyCompactList}\small\item\em 模糊程度，数值越小表示越清晰，0 $\sim$ 1 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a6f06b722a0a917a63cf8f2b0c2ee8765}\label{struct_m_g___f_a_c_e_a6f06b722a0a917a63cf8f2b0c2ee8765}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a6f06b722a0a917a63cf8f2b0c2ee8765}{minority}
+\begin{DoxyCompactList}\small\item\em 是否是少数民族（对于汉族而言） \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_a6dd8696e698351c35ebaa0a237f8da62}\label{struct_m_g___f_a_c_e_a6dd8696e698351c35ebaa0a237f8da62}} 
+M\+G\+\_\+\+S\+I\+N\+G\+LE \hyperlink{struct_m_g___f_a_c_e_a6dd8696e698351c35ebaa0a237f8da62}{moutstatus} \mbox{[}\hyperlink{_m_g___common_8h_afb9b4e071d6e3a778e82fd24ee21c02ba0e4a9c1f6b20f96ceda0bb3ace5044ec}{M\+G\+\_\+\+M\+O\+U\+T\+H\+S\+T\+A\+T\+U\+S\+\_\+\+C\+O\+U\+NT}\mbox{]}
+\begin{DoxyCompactList}\small\item\em 嘴部状态 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+记录人脸信息的类型 
+
+记录了人脸所有属性信息，关键点信息的类型。 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_m_g___f_a_c_e_ab61f801c8d14f8686654facb639bb763}\label{struct_m_g___f_a_c_e_ab61f801c8d14f8686654facb639bb763}} 
+\index{M\+G\+\_\+\+F\+A\+CE@{M\+G\+\_\+\+F\+A\+CE}!confidence@{confidence}}
+\index{confidence@{confidence}!M\+G\+\_\+\+F\+A\+CE@{M\+G\+\_\+\+F\+A\+CE}}
+\subsubsection{\texorpdfstring{confidence}{confidence}}
+{\footnotesize\ttfamily M\+G\+\_\+\+S\+I\+N\+G\+LE M\+G\+\_\+\+F\+A\+C\+E\+::confidence}
+
+人脸置信度，为一个 0 $\sim$ 1 之间的浮点数。 超过 0.\+5 表示这确实是一个人脸。 \mbox{\Hypertarget{struct_m_g___f_a_c_e_a71e1f0316c4696a7a98bd2dfb7b817e0}\label{struct_m_g___f_a_c_e_a71e1f0316c4696a7a98bd2dfb7b817e0}} 
+\index{M\+G\+\_\+\+F\+A\+CE@{M\+G\+\_\+\+F\+A\+CE}!track\+\_\+id@{track\+\_\+id}}
+\index{track\+\_\+id@{track\+\_\+id}!M\+G\+\_\+\+F\+A\+CE@{M\+G\+\_\+\+F\+A\+CE}}
+\subsubsection{\texorpdfstring{track\+\_\+id}{track\_id}}
+{\footnotesize\ttfamily M\+G\+\_\+\+I\+N\+T32 M\+G\+\_\+\+F\+A\+C\+E\+::track\+\_\+id}
+
+人脸的跟踪标记。 如果只对单张图做人脸检测则固定返回 -\/1， 否则在不同帧中相同的 track\+\_\+id 表示同一个人脸。 每次初始化后 track\+\_\+id 的值为从 0 开始依此递增。 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/\+Users/binghezhouke/\+Documents/deploy/workspace/\+P\+R\+O\+D\+U\+C\+T\+\_\+\+Megvii\+Facepp\+\_\+master\+\_\+0.\+5.\+2-\/online-\/landmark/megfacev2adapter/include/\hyperlink{_m_g___common_8h}{M\+G\+\_\+\+Common.\+h}\end{DoxyCompactItemize}
