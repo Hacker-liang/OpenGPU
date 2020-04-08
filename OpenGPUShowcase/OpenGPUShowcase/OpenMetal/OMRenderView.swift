@@ -36,6 +36,7 @@ class OMRenderView: MTKView, OMImageConsumer {
         guard let commandBuffer = commandQueue?.makeCommandBuffer() else { return }
         commandBuffer.renderQuda(pipelineState: self.renderPSO, renderPassDescriptor: self.currentRenderPassDescriptor, inputTextures: [sourceTexture], outputTexture: displayTexture)
         commandBuffer.present(drawable)
+        
         commandBuffer.commit()
     }
     

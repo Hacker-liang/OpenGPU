@@ -22,9 +22,12 @@ class OMTexture {
                                                                                 width: width,
                                                                                 height: height,
                                                                                 mipmapped: false)
+        
+
         textureDescriptor.usage = [.renderTarget, .shaderRead, .shaderWrite]
 
         self.texture = device.makeTexture(descriptor: textureDescriptor)
+        
         if self.texture == nil {
             print("texture nil")
         }

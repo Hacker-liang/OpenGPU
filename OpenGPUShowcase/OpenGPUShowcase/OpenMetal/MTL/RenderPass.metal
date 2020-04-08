@@ -56,3 +56,5 @@ fragment half4 commonFragmentShader(OneInputVertextOutput in [[stage_in]],
     half4 color = texture.sample(qudaSampler, in.textureCoordinate);
     return color;
 }
+
+

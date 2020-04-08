@@ -27,6 +27,8 @@ extension MTLCommandBuffer {
             renderPass.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 1)
             renderPass.colorAttachments[0].storeAction = .store
             renderPass.colorAttachments[0].loadAction = .clear
+            
+    
         
         } else {
             renderPass = renderPassDescriptor!
@@ -34,6 +36,8 @@ extension MTLCommandBuffer {
         guard let renderEncoder = self.makeRenderCommandEncoder(descriptor: renderPass) else {
             fatalError("error create commandEncoder")
         }
+        
+        
         renderEncoder.setRenderPipelineState(pipelineState)
         renderEncoder.setFrontFacing(.counterClockwise)
         renderEncoder.setVertexBuffer(vertextBuffer, offset: 0, index: 0)
