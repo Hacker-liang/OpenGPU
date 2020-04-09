@@ -12,7 +12,22 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
 
+#define kOneInputVertexFunc ""
 
+typedef struct {
+    
+    float4 position [[position]];
+    float2 textureCoordinate;
+    
+} OneInputVertextOutput;
+
+typedef struct {
+    
+    float4 position [[position]];
+    float2 textureCoordinate;
+    float2 textureCoordinate2;
+    
+} TwoInputVertextOutput;
 
 
 #endif /* MTLShaderTypes_h */

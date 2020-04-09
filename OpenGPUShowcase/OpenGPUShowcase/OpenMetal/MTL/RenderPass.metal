@@ -12,22 +12,6 @@
 
 using namespace metal;
 
-typedef struct {
-    
-    float4 position [[position]];
-    float2 textureCoordinate;
-    
-} OneInputVertextOutput;
-
-typedef struct {
-    
-    float4 position [[position]];
-    float2 textureCoordinate;
-    float2 textureCoordinate2;
-    
-} TwoInputVertextOutput;
-
-
 vertex OneInputVertextOutput oneInputVertexShader(const device packed_float2 *position [[buffer(0)]],
                                          const device packed_float2 *coordinate [[buffer(1)]],
                                          uint vid [[vertex_id]]) {
