@@ -27,6 +27,7 @@ extension MTLCommandBuffer {
             renderPass.colorAttachments[0].clearColor = MTLClearColorMake(0, 0, 0, 1)
             renderPass.colorAttachments[0].storeAction = .store
             renderPass.colorAttachments[0].loadAction = .clear
+
         
         } else {
             renderPass = renderPassDescriptor!
@@ -43,10 +44,23 @@ extension MTLCommandBuffer {
             let textureCoordinateBuffer = OMRenderDevice.shared().device.makeBuffer(bytes: standardTextureCoordinate, length: standardTextureCoordinate.count*MemoryLayout<Float>.size, options: .storageModeShared);
             textureCoordinateBuffer?.label = "texture coordinate buffer"
             renderEncoder.setVertexBuffer(textureCoordinateBuffer, offset: 0, index: index+1)
+            
             renderEncoder.setFragmentTexture(texture.texture, index: index)
         }
+        
+        let intensity:[Float] = [0.8]
+        
+        let intensityBuffer = OMRenderDevice.shared().device.makeBuffer(bytes: intensity, length: intensity.count*MemoryLayout<Float>.size, options: .storageModeShared);
+        intensityBuffer?.label = "intensityBuffer"
+        
+        
+        renderEncoder.setFragmentBuffer(intensityBuffer, offset: 0, index: 0)
+        
         renderEncoder.drawPrimitives(type: .triangleStrip, vertexStart: 0, vertexCount: 4)
         renderEncoder.endEncoding()
+        
+        
+        
     }
 }
 

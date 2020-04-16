@@ -44,9 +44,18 @@
 		66B3AB41243DCF8F00036858 /* OMLookup.metal in Sources */ = {isa = PBXBuildFile; fileRef = 66B3AB40243DCF8F00036858 /* OMLookup.metal */; };
 		66B3AB43243EF87500036858 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3AB42243EF87500036858 /* CoreMotion.framework */; };
 		66B3AB45243EF87B00036858 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3AB44243EF87B00036858 /* CoreMedia.framework */; };
-		66B3AB50243EF93700036858 /* libMGFacepp-0.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3AB47243EF93700036858 /* libMGFacepp-0.5.2.a */; };
-		66B3AB51243EF93700036858 /* megviifacepp_0_5_2_model in Resources */ = {isa = PBXBuildFile; fileRef = 66B3AB4F243EF93700036858 /* megviifacepp_0_5_2_model */; };
 		66B3AB54243F15DA00036858 /* OMImageProcesser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66B3AB53243F15DA00036858 /* OMImageProcesser.swift */; };
+		66B3AB57243F26B100036858 /* bai.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B3AB56243F26B100036858 /* bai.png */; };
+		66F9F29C244703EA005D05AA /* OMFaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F29B244703EA005D05AA /* OMFaceDetect.swift */; };
+		66F9F2B424470B2E005D05AA /* MGFaceLicenseHandle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F2B024470B2E005D05AA /* MGFaceLicenseHandle.mm */; };
+		66F9F2B524470E1A005D05AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC0E2419D8BA00CC5C69 /* AVFoundation.framework */; };
+		66F9F2B624470E20005D05AA /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66B3AB44243EF87B00036858 /* CoreMedia.framework */; };
+		66F9F2B824470E29005D05AA /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F9F2B724470E29005D05AA /* QuartzCore.framework */; };
+		66F9F2C224471108005D05AA /* libMGFacepp-0.5.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F9F2BA24471107005D05AA /* libMGFacepp-0.5.2.a */; };
+		66F9F2C324471108005D05AA /* megviifacepp_0_5_2_model in Resources */ = {isa = PBXBuildFile; fileRef = 66F9F2BC24471107005D05AA /* megviifacepp_0_5_2_model */; };
+		66F9F2CF24471231005D05AA /* libMGLicMgrSDK-0.3.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66F9F2CC24471231005D05AA /* libMGLicMgrSDK-0.3.1.a */; };
+		66F9F2D324483C73005D05AA /* OMFaceBeautyFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F2D224483C73005D05AA /* OMFaceBeautyFilter.swift */; };
+		66F9F2D524484E20005D05AA /* OMFaceBeautyMTL.metal in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F2D424484E20005D05AA /* OMFaceBeautyMTL.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,16 +120,29 @@
 		66B3AB40243DCF8F00036858 /* OMLookup.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OMLookup.metal; sourceTree = "<group>"; };
 		66B3AB42243EF87500036858 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		66B3AB44243EF87B00036858 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
-		66B3AB47243EF93700036858 /* libMGFacepp-0.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libMGFacepp-0.5.2.a"; sourceTree = "<group>"; };
-		66B3AB48243EF93700036858 /* MGFaceppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceppConfig.h; sourceTree = "<group>"; };
-		66B3AB49243EF93700036858 /* MGAlgorithmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAlgorithmInfo.h; sourceTree = "<group>"; };
-		66B3AB4A243EF93700036858 /* MGFacepp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFacepp.h; sourceTree = "<group>"; };
-		66B3AB4B243EF93700036858 /* MGDetectRectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetectRectInfo.h; sourceTree = "<group>"; };
-		66B3AB4C243EF93700036858 /* MGFaceppCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceppCommon.h; sourceTree = "<group>"; };
-		66B3AB4D243EF93700036858 /* MGImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageData.h; sourceTree = "<group>"; };
-		66B3AB4E243EF93700036858 /* MGFaceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceInfo.h; sourceTree = "<group>"; };
-		66B3AB4F243EF93700036858 /* megviifacepp_0_5_2_model */ = {isa = PBXFileReference; lastKnownFileType = file; path = megviifacepp_0_5_2_model; sourceTree = "<group>"; };
 		66B3AB53243F15DA00036858 /* OMImageProcesser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMImageProcesser.swift; sourceTree = "<group>"; };
+		66B3AB56243F26B100036858 /* bai.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bai.png; sourceTree = "<group>"; };
+		66F9F29B244703EA005D05AA /* OMFaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMFaceDetect.swift; sourceTree = "<group>"; };
+		66F9F29D24470437005D05AA /* OpenGPUShowcase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenGPUShowcase-Bridging-Header.h"; sourceTree = "<group>"; };
+		66F9F2A024470B2E005D05AA /* MGNetAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGNetAccount.h; sourceTree = "<group>"; };
+		66F9F2A124470B2E005D05AA /* MGFaceLicenseHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceLicenseHandle.h; sourceTree = "<group>"; };
+		66F9F2B024470B2E005D05AA /* MGFaceLicenseHandle.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MGFaceLicenseHandle.mm; sourceTree = "<group>"; };
+		66F9F2B724470E29005D05AA /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		66F9F2B924471105005D05AA /* MGFaceInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceInfo.h; sourceTree = "<group>"; };
+		66F9F2BA24471107005D05AA /* libMGFacepp-0.5.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libMGFacepp-0.5.2.a"; sourceTree = "<group>"; };
+		66F9F2BB24471107005D05AA /* MGFaceppCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceppCommon.h; sourceTree = "<group>"; };
+		66F9F2BC24471107005D05AA /* megviifacepp_0_5_2_model */ = {isa = PBXFileReference; lastKnownFileType = file; path = megviifacepp_0_5_2_model; sourceTree = "<group>"; };
+		66F9F2BD24471108005D05AA /* MGFaceppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFaceppConfig.h; sourceTree = "<group>"; };
+		66F9F2BE24471108005D05AA /* MGImageData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGImageData.h; sourceTree = "<group>"; };
+		66F9F2BF24471108005D05AA /* MGFacepp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGFacepp.h; sourceTree = "<group>"; };
+		66F9F2C024471108005D05AA /* MGDetectRectInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGDetectRectInfo.h; sourceTree = "<group>"; };
+		66F9F2C124471108005D05AA /* MGAlgorithmInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGAlgorithmInfo.h; sourceTree = "<group>"; };
+		66F9F2CC24471231005D05AA /* libMGLicMgrSDK-0.3.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libMGLicMgrSDK-0.3.1.a"; sourceTree = "<group>"; };
+		66F9F2CD24471231005D05AA /* MGLicenseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLicenseManager.h; sourceTree = "<group>"; };
+		66F9F2CE24471231005D05AA /* MGLicenseCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGLicenseCommon.h; sourceTree = "<group>"; };
+		66F9F2D02447126A005D05AA /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		66F9F2D224483C73005D05AA /* OMFaceBeautyFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMFaceBeautyFilter.swift; sourceTree = "<group>"; };
+		66F9F2D424484E20005D05AA /* OMFaceBeautyMTL.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OMFaceBeautyMTL.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,12 +150,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F9F2CF24471231005D05AA /* libMGLicMgrSDK-0.3.1.a in Frameworks */,
 				6607DC132419D93900CC5C69 /* CoreGraphics.framework in Frameworks */,
 				66B3AB43243EF87500036858 /* CoreMotion.framework in Frameworks */,
+				66F9F2B524470E1A005D05AA /* AVFoundation.framework in Frameworks */,
+				66F9F2B824470E29005D05AA /* QuartzCore.framework in Frameworks */,
 				6607DC152419D96800CC5C69 /* UIKit.framework in Frameworks */,
+				66F9F2B624470E20005D05AA /* CoreMedia.framework in Frameworks */,
 				6607DC0F2419D8BA00CC5C69 /* AVFoundation.framework in Frameworks */,
 				6607DC112419D8C200CC5C69 /* OpenGLES.framework in Frameworks */,
-				66B3AB50243EF93700036858 /* libMGFacepp-0.5.2.a in Frameworks */,
+				66F9F2C224471108005D05AA /* libMGFacepp-0.5.2.a in Frameworks */,
 				66B3AB45243EF87B00036858 /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -185,6 +211,7 @@
 				6607DBC32419D7C800CC5C69 /* AppDelegate.swift */,
 				6607DBC72419D7C800CC5C69 /* ViewController.swift */,
 				66801A4024249A0B006F7D1A /* RGBFilter.swift */,
+				66F9F29D24470437005D05AA /* OpenGPUShowcase-Bridging-Header.h */,
 				6607DBC92419D7C800CC5C69 /* Main.storyboard */,
 				6607DBCC2419D7D100CC5C69 /* Assets.xcassets */,
 				6607DBCE2419D7D100CC5C69 /* LaunchScreen.storyboard */,
@@ -257,6 +284,8 @@
 		6607DC0D2419D8BA00CC5C69 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				66F9F2D02447126A005D05AA /* libc++.tbd */,
+				66F9F2B724470E29005D05AA /* QuartzCore.framework */,
 				66B3AB44243EF87B00036858 /* CoreMedia.framework */,
 				66B3AB42243EF87500036858 /* CoreMotion.framework */,
 				6607DC142419D96800CC5C69 /* UIKit.framework */,
@@ -270,6 +299,7 @@
 		665505482431ADFE00045191 /* OpenMetal */ = {
 			isa = PBXGroup;
 			children = (
+				66B3AB55243F269700036858 /* Resources */,
 				6655054E2431C7C800045191 /* OMPipline.swift */,
 				6655054A2431C2EA00045191 /* OMTexture.swift */,
 				665505502431C96C00045191 /* OMCamera.swift */,
@@ -294,6 +324,7 @@
 		669D1B032432CED00037B301 /* MTL */ = {
 			isa = PBXGroup;
 			children = (
+				66F9F2D424484E20005D05AA /* OMFaceBeautyMTL.metal */,
 				669D1B042432CF3A0037B301 /* RenderPass.metal */,
 				66B3AB40243DCF8F00036858 /* OMLookup.metal */,
 				66B3A949243587E400036858 /* OMBaseFilter.metal */,
@@ -305,33 +336,9 @@
 		66B3A9BB243DCAC400036858 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
-				66B3A9BC243DCAFD00036858 /* face */,
+				66F9F29F24470B2E005D05AA /* Face++ */,
 			);
 			path = Libs;
-			sourceTree = "<group>";
-		};
-		66B3A9BC243DCAFD00036858 /* face */ = {
-			isa = PBXGroup;
-			children = (
-				66B3AB46243EF93700036858 /* iOS_SDK */,
-			);
-			path = face;
-			sourceTree = "<group>";
-		};
-		66B3AB46243EF93700036858 /* iOS_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				66B3AB47243EF93700036858 /* libMGFacepp-0.5.2.a */,
-				66B3AB48243EF93700036858 /* MGFaceppConfig.h */,
-				66B3AB49243EF93700036858 /* MGAlgorithmInfo.h */,
-				66B3AB4A243EF93700036858 /* MGFacepp.h */,
-				66B3AB4B243EF93700036858 /* MGDetectRectInfo.h */,
-				66B3AB4C243EF93700036858 /* MGFaceppCommon.h */,
-				66B3AB4D243EF93700036858 /* MGImageData.h */,
-				66B3AB4E243EF93700036858 /* MGFaceInfo.h */,
-				66B3AB4F243EF93700036858 /* megviifacepp_0_5_2_model */,
-			);
-			path = iOS_SDK;
 			sourceTree = "<group>";
 		};
 		66B3AB52243F065D00036858 /* Filter */ = {
@@ -339,8 +346,64 @@
 			children = (
 				66B3A947243331B300036858 /* OMBaseFilter.swift */,
 				66B3AB3E243DCEEA00036858 /* OMLookupFilter.swift */,
+				66F9F2D224483C73005D05AA /* OMFaceBeautyFilter.swift */,
+				66F9F29B244703EA005D05AA /* OMFaceDetect.swift */,
 			);
 			path = Filter;
+			sourceTree = "<group>";
+		};
+		66B3AB55243F269700036858 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				66B3AB56243F26B100036858 /* bai.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		66F9F29F24470B2E005D05AA /* Face++ */ = {
+			isa = PBXGroup;
+			children = (
+				66F9F2CB24471231005D05AA /* MegviiLicMgr-iOS-SDK */,
+				66F9F2C42447119B005D05AA /* C_SDK */,
+				66F9F2A124470B2E005D05AA /* MGFaceLicenseHandle.h */,
+				66F9F2B024470B2E005D05AA /* MGFaceLicenseHandle.mm */,
+				66F9F2A624470B2E005D05AA /* MGFaceppSDK */,
+				66F9F2A024470B2E005D05AA /* MGNetAccount.h */,
+			);
+			path = "Face++";
+			sourceTree = "<group>";
+		};
+		66F9F2A624470B2E005D05AA /* MGFaceppSDK */ = {
+			isa = PBXGroup;
+			children = (
+				66F9F2BA24471107005D05AA /* libMGFacepp-0.5.2.a */,
+				66F9F2BC24471107005D05AA /* megviifacepp_0_5_2_model */,
+				66F9F2C124471108005D05AA /* MGAlgorithmInfo.h */,
+				66F9F2C024471108005D05AA /* MGDetectRectInfo.h */,
+				66F9F2B924471105005D05AA /* MGFaceInfo.h */,
+				66F9F2BF24471108005D05AA /* MGFacepp.h */,
+				66F9F2BB24471107005D05AA /* MGFaceppCommon.h */,
+				66F9F2BD24471108005D05AA /* MGFaceppConfig.h */,
+				66F9F2BE24471108005D05AA /* MGImageData.h */,
+			);
+			path = MGFaceppSDK;
+			sourceTree = "<group>";
+		};
+		66F9F2C42447119B005D05AA /* C_SDK */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = C_SDK;
+			sourceTree = "<group>";
+		};
+		66F9F2CB24471231005D05AA /* MegviiLicMgr-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				66F9F2CC24471231005D05AA /* libMGLicMgrSDK-0.3.1.a */,
+				66F9F2CD24471231005D05AA /* MGLicenseManager.h */,
+				66F9F2CE24471231005D05AA /* MGLicenseCommon.h */,
+			);
+			path = "MegviiLicMgr-iOS-SDK";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,7 +510,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66B3AB51243EF93700036858 /* megviifacepp_0_5_2_model in Resources */,
+				66F9F2C324471108005D05AA /* megviifacepp_0_5_2_model in Resources */,
+				66B3AB57243F26B100036858 /* bai.png in Resources */,
 				6607DBD02419D7D100CC5C69 /* LaunchScreen.storyboard in Resources */,
 				6607DBCD2419D7D100CC5C69 /* Assets.xcassets in Resources */,
 				6607DBCB2419D7C800CC5C69 /* Main.storyboard in Resources */,
@@ -495,13 +559,17 @@
 				6607DC032419D83100CC5C69 /* OGRenderHelper.swift in Sources */,
 				6607DC052419D83100CC5C69 /* OGCamera.swift in Sources */,
 				66B3A94A243587E400036858 /* OMBaseFilter.metal in Sources */,
+				66F9F2B424470B2E005D05AA /* MGFaceLicenseHandle.mm in Sources */,
 				6607DC0A2419D83100CC5C69 /* OGShaderProgram.swift in Sources */,
+				66F9F29C244703EA005D05AA /* OMFaceDetect.swift in Sources */,
 				6655054F2431C7C800045191 /* OMPipline.swift in Sources */,
+				66F9F2D324483C73005D05AA /* OMFaceBeautyFilter.swift in Sources */,
 				6607DC072419D83100CC5C69 /* OGEAGLContext.swift in Sources */,
 				665505532431D22000045191 /* OMRenderDevice.swift in Sources */,
 				66801A3824205EB9006F7D1A /* OGBaseFilter.swift in Sources */,
 				665505512431C96C00045191 /* OMCamera.swift in Sources */,
 				6607DC0C2419D83100CC5C69 /* OGColor.swift in Sources */,
+				66F9F2D524484E20005D05AA /* OMFaceBeautyMTL.metal in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,9 +755,14 @@
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/MegviiFacepp-iOS-SDK-0.5.2-CN/iOS_SDK",
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/MegviiFacepp-iOS-SDK-0.5.2-CN/C_SDK",
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/face/iOS_SDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/MegviiLicMgr-iOS-SDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/MGFaceppSDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/C_SDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lps.OpenGPUShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenGPUShowcase/OpenGPUShowcase-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -712,9 +785,14 @@
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/MegviiFacepp-iOS-SDK-0.5.2-CN/iOS_SDK",
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/MegviiFacepp-iOS-SDK-0.5.2-CN/C_SDK",
 					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/face/iOS_SDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/MegviiLicMgr-iOS-SDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/MGFaceppSDK",
+					"$(PROJECT_DIR)/OpenGPUShowcase/Libs/Face++/C_SDK",
 				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lps.OpenGPUShowcase;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OpenGPUShowcase/OpenGPUShowcase-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

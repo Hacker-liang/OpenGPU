@@ -13,14 +13,14 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
     
     var allTargets = [OMImageConsumer]()
     
-    private var processPSO: MTLRenderPipelineState!
-    private var commandQueue: MTLCommandQueue!
+    private (set) var processPSO: MTLRenderPipelineState!
+    private (set) var commandQueue: MTLCommandQueue!
 
-    private var inputTextures = [UInt: OMTexture]()
+    private (set) var inputTextures = [Int: OMTexture]()
     
-    private var outputTexture: OMTexture?
+    private (set) var outputTexture: OMTexture?
     
-    private var maxTextureInputs: Int = 1
+    private (set) var maxTextureInputs: Int = 1
     
     private var renderSemaphore = DispatchSemaphore(value: 1)
     
@@ -49,7 +49,7 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
 //            renderSemaphore.signal()
 //        }
         
-        inputTextures[atIndex] = texture
+        inputTextures[Int(atIndex)] = texture
         
         if inputTextures.count >= maxTextureInputs {
             guard let outputWidth = inputTextures[0]?.texture?.width,
@@ -60,12 +60,20 @@ class OMBaseFilter: OMImageConsumer, OMImageProvider {
             let outputTexture = OMTexture(device: OMRenderDevice.shared().device, width: outputWidth, height: outputHeight, oreation: 0)
             guard let commandBuffer = commandQueue?.makeCommandBuffer() else { return }
 
-            commandBuffer.renderQuda(pipelineState: self.processPSO, inputTextures: Array(inputTextures.values), outputTexture: outputTexture)
+            var arrays = [OMTexture]()
+            for i in 0..<maxTextureInputs {
+                if let t = inputTextures[i] {
+                    arrays.append(t)
+                }
+            }
+            commandBuffer.renderQuda(pipelineState: self.processPSO, inputTextures: arrays, outputTexture: outputTexture)
             commandBuffer.commit()
             
             self.updateAllTargets(texture: outputTexture)
         }
     }
+    
+    
     
 }
 

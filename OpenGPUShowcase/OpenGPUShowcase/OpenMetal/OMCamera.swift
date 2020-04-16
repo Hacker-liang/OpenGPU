@@ -9,9 +9,17 @@
 import Foundation
 import AVFoundation
 
+protocol OMCameraDelegate: NSObject {
+    
+    func cameraImageOutput(didOutput sampleBuffer: CMSampleBuffer)
+    
+}
+
 class OMCamera: NSObject, OMImageProvider {
     
     let captureAsYUV: Bool  //是否以YUV的格式进行视频捕获
+    
+    public weak var delegate: OMCameraDelegate?
 
     private var captureSession: AVCaptureSession!
     private var captureDevice: AVCaptureDevice?
@@ -89,17 +97,20 @@ class OMCamera: NSObject, OMImageProvider {
     
     private func deviceWithCameraPosition(position: AVCaptureDevice.Position) -> AVCaptureDevice? {
         
-        let session: AVCaptureDevice.DiscoverySession
+//        let session: AVCaptureDevice.DiscoverySession
+//
+//        if #available(iOS 13.0, *) {
+////            session = AVCaptureDevice.default(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
+//        } else {
+////            session = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
+//        }
         
-        if #available(iOS 13.0, *) {
-            session = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
-        } else {
-            session = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInDualCamera], mediaType: .video, position: position)
-        }
+//        guard let device = session.devices.first else {
+//            return AVCaptureDevice.default(for: AVMediaType.video)
+//        }
         
-        guard let device = session.devices.first else {
-            return AVCaptureDevice.default(for: AVMediaType.video)
-        }
+        let device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: .video, position: position)
+
         return device
     }
     
@@ -157,6 +168,10 @@ extension OMCamera: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         if let t = outputTexture {
             self.updateAllTargets(texture: t)
+        }
+        
+        if let delegate = self.delegate {
+            delegate.cameraImageOutput(didOutput: sampleBuffer)
         }
     }
 }

@@ -17,6 +17,7 @@ class OMImageProcesser: OMImageProvider {
     
     init(image: String) {
         allTargets = [OMImageConsumer]()
+        imageBitmap = UIImage(named: image)?.cgImage;
     }
     
     var allTargets: [OMImageConsumer]
@@ -31,8 +32,18 @@ class OMImageProcesser: OMImageProvider {
         textureLoader.newTexture(cgImage: image, options: [MTKTextureLoader.Option.SRGB: false], completionHandler: { (texture, error) in
             if let t = texture {
                 self.imageTexture = OMTexture(texture: t)
+                self.notifyTargets()
             }
         })
+    }
+    
+    public func notifyTargets() {
+        guard let texture = self.imageTexture else {
+            return
+        }
+        for t in allTargets {
+            t.newTextureAvailable(texture: texture, atIndex: 1)
+        }
     }
     
 }
