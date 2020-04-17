@@ -54,6 +54,8 @@ class OMFaceDetect: NSObject {
         var tempArray = [OMFaceModel]()
         for item in facelist {
             let faceModel = OMFaceModel()
+            
+            manager.getGetLandmark(item, isSmooth: true, pointsNumber: 106)
             var points = [CGPoint]()
             for p in item.points {
                 points.append(p.cgPointValue)

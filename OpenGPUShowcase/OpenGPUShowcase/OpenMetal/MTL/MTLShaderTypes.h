@@ -14,12 +14,15 @@
 
 #define kOneInputVertexFunc ""
 
-typedef struct {
+struct OneInputVertextOutput {
     
     float4 position [[position]];
     float2 textureCoordinate;
     
-} OneInputVertextOutput;
+};
+
+typedef struct OneInputVertextOutput OneInputVertextOutput;
+
 
 typedef struct {
     

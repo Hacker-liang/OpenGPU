@@ -51,7 +51,7 @@ class ViewController: UIViewController {
 //
         faceDetecter = OMFaceDetect()
         
-        displayView = OMRenderView(frame: CGRect(x: 0, y: 100, width: self.view.bounds.size.width, height: self.view.bounds.size.width/9*16))
+        displayView = OMRenderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.width/9*16))
         self.view.addSubview(displayView)
         
         faceFilter.addTarget(target: displayView)
