@@ -45,7 +45,9 @@ class OMCamera: NSObject, OMImageProvider {
         
         //开始配置session
         self.captureSession.beginConfiguration()
+        
         self.captureDevice = self.deviceWithCameraPosition(position: self.cameraPosition)
+        
         guard let device = self.captureDevice else {
             return
         }
@@ -110,7 +112,7 @@ class OMCamera: NSObject, OMImageProvider {
 //        }
         
         let device = AVCaptureDevice.default(AVCaptureDevice.DeviceType.builtInWideAngleCamera, for: .video, position: position)
-
+        
         return device
     }
     

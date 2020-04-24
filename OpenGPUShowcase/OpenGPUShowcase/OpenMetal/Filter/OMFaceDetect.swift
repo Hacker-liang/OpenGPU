@@ -60,6 +60,7 @@ class OMFaceDetect: NSObject {
             for p in item.points {
                 points.append(p.cgPointValue)
             }
+            faceModel.trackId = item.trackID
             faceModel.landmarks = points
             faceModel.faceBounds = item.rect
             faceModel.pitchAngle = CGFloat(item.pitch)
@@ -86,6 +87,7 @@ class OMFaceDetect: NSObject {
 
 
 class OMFaceModel: NSObject {
+    var trackId: Int?
     var faceBounds: CGRect?
     var landmarks: [CGPoint]?
     var yawAngle: CGFloat = 0.0

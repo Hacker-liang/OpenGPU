@@ -22,7 +22,7 @@ vertex OneInputVertextOutput oneInputVertexShader(const device packed_float2 *po
 }
 
 
-vertex TwoInputVertextOutput twoInputVetexShader(const device packed_float2 *position [[buffer(0)]],
+vertex TwoInputVertextOutput twoInputVertexShader(const device packed_float2 *position [[buffer(0)]],
                                                  const device packed_float2 *coordinate [[buffer(1)]],
                                                  const device packed_float2 *coordinate2 [[buffer(2)]],
                                                  uint vid [[vertex_id]]) {
@@ -33,6 +33,17 @@ vertex TwoInputVertextOutput twoInputVetexShader(const device packed_float2 *pos
     
     return output;
 }
+
+//vertex MultipleVertextOutput multipleInputVertexShader(const device packed_float2 *position [[buffer(0)]],
+//                                                       const device packed_float2 *coordinate [[buffer(1)]],
+//                                                       uint vid [[vertex_id]]) {
+//    MultipleVertextOutput output;
+//    output.position = vector_float4(position[vid], 0.0, 1.0);
+//    output.
+//    
+//    
+//    textureCoordinate = coordinate[vid];
+//}
 
 fragment half4 commonFragmentShader(OneInputVertextOutput in [[stage_in]],
                                      texture2d<half> texture [[texture(0)]]) {

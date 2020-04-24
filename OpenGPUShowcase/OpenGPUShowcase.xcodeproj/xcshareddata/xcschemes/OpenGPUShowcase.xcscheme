@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6607DBBF2419D7C800CC5C69"
-               BuildableName = "OpenGPUShowcase.app"
+               BuildableName = "OpenGPU.app"
                BlueprintName = "OpenGPUShowcase"
                ReferencedContainer = "container:OpenGPUShowcase.xcodeproj">
             </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6607DBBF2419D7C800CC5C69"
-            BuildableName = "OpenGPUShowcase.app"
+            BuildableName = "OpenGPU.app"
             BlueprintName = "OpenGPUShowcase"
             ReferencedContainer = "container:OpenGPUShowcase.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6607DBBF2419D7C800CC5C69"
-            BuildableName = "OpenGPUShowcase.app"
+            BuildableName = "OpenGPU.app"
             BlueprintName = "OpenGPUShowcase"
             ReferencedContainer = "container:OpenGPUShowcase.xcodeproj">
          </BuildableReference>

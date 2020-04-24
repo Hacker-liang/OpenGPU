@@ -1,0 +1,63 @@
+{
+  "parts": {
+    "heart": {
+      "enable": true,
+      "frameCount": 80,
+      "height": 800,
+      "hotlink_enable": false,
+      "position": {
+        "positionX": [
+          {
+            "index": 106,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "index": 107,
+            "x": 446.83,
+            "y": 0
+          }
+        ],
+        "positionY": []
+      },
+      "positionRelationType": 0,
+      "positionType": 0,
+      "rotateCenter": [
+        {
+          "x": 225,
+          "y": 400
+        }
+      ],
+      "scale": {
+        "scaleX": {
+          "pointA": [
+            {
+              "index": 106,
+              "x": 0,
+              "y": 0
+            }
+          ],
+          "pointB": [
+            {
+              "index": 107,
+              "x": 446.83,
+              "y": 0
+            }
+          ]
+        },
+        "scaleY": {
+          "pointA": [],
+          "pointB": []
+        }
+      },
+      "triggerDelay": 0,
+      "triggerLoop": 1,
+      "triggerStop": false,
+      "triggerType": 262144,
+      "width": 450,
+      "zPosition": 0
+    }
+  },
+  "stickerType": "2D",
+  "version": "1.1"
+}
