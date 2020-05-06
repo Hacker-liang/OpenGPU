@@ -38,23 +38,28 @@ class ViewController: UIViewController {
         
         camera?.delegate = self
         
-        var last: OMImageProvider = camera!
-        for _ in 0...0 {
-            let fileter = OMLookupFilter(lookupImage: "bai.png")
-            last.addTarget(target: fileter)
-            last = fileter
-        }
+//        var last: OMImageProvider = camera!
+//        for _ in 0...0 {
+//            let fileter = OMLookupFilter(lookupImage: "bai.png")
+//            last.addTarget(target: fileter)
+//            last = fileter
+//        }
         
-        faceFilter = OMFaceBeautyFilter()
+//        faceFilter = OMFaceBeautyFilter()
 //
-        last.addTarget(target: faceFilter)
+//        last.addTarget(target: faceFilter)
 //
-        faceDetecter = OMFaceDetect()
+//        faceDetecter = OMFaceDetect()
+        
+        let stickerFilter = OMStickerFilter()
+        
+        camera?.addTarget(target: stickerFilter)
+        
         
         displayView = OMRenderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.size.width, height: self.view.bounds.size.width/9*16))
         self.view.addSubview(displayView)
         
-        faceFilter.addTarget(target: displayView)
+        stickerFilter.addTarget(target: displayView)
         
     }
     
@@ -69,9 +74,9 @@ class ViewController: UIViewController {
 
 extension ViewController: OMCameraDelegate {
     func cameraImageOutput(didOutput sampleBuffer: CMSampleBuffer) {
-        faceDetecter?.detectSampleBuffer(sampleBuffer: sampleBuffer) { [weak self] (faceList) in
-            self?.faceFilter.updateFaceData(faceData: faceList)
-        }
+//        faceDetecter?.detectSampleBuffer(sampleBuffer: sampleBuffer) { [weak self] (faceList) in
+//            self?.faceFilter.updateFaceData(faceData: faceList)
+//        }
     }
 }
 

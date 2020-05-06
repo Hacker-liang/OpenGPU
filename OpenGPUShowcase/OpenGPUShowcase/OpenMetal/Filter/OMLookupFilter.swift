@@ -13,7 +13,7 @@ class OMLookupFilter: OMBaseFilter {
     private var lookupImageProcesser: OMImageProcesser?
     
     init(lookupImage: String) {
-        super.init(vertextFuncName: kOneInputVertexFunc, fragmentFuncName: kLookupFragmentFunc, maxTextureInputs: 2)
+        super.init(vertextFuncName: kTwoputVertexFunc, fragmentFuncName: kLookupFragmentFunc, maxTextureInputs: 2)
         lookupImageProcesser = OMImageProcesser(image: lookupImage)
         lookupImageProcesser?.addTarget(target: self)
         lookupImageProcesser?.processImage()

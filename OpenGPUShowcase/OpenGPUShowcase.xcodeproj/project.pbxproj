@@ -139,6 +139,7 @@
 		66F3E502245146C800DE3858 /* OMStickerFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3E501245146C800DE3858 /* OMStickerFrame.swift */; };
 		66F3E505245189BE00DE3858 /* OMStickerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3E504245189BE00DE3858 /* OMStickerManager.swift */; };
 		66F3E507245193B200DE3858 /* OMStickerFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F3E506245193B200DE3858 /* OMStickerFilter.swift */; };
+		66F3E50924528F0200DE3858 /* OMStickerMSL.metal in Sources */ = {isa = PBXBuildFile; fileRef = 66F3E50824528F0200DE3858 /* OMStickerMSL.metal */; };
 		66F9F29C244703EA005D05AA /* OMFaceDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F29B244703EA005D05AA /* OMFaceDetect.swift */; };
 		66F9F2B424470B2E005D05AA /* MGFaceLicenseHandle.mm in Sources */ = {isa = PBXBuildFile; fileRef = 66F9F2B024470B2E005D05AA /* MGFaceLicenseHandle.mm */; };
 		66F9F2B524470E1A005D05AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6607DC0E2419D8BA00CC5C69 /* AVFoundation.framework */; };
@@ -308,6 +309,8 @@
 		66F3E501245146C800DE3858 /* OMStickerFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMStickerFrame.swift; sourceTree = "<group>"; };
 		66F3E504245189BE00DE3858 /* OMStickerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMStickerManager.swift; sourceTree = "<group>"; };
 		66F3E506245193B200DE3858 /* OMStickerFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMStickerFilter.swift; sourceTree = "<group>"; };
+		66F3E50824528F0200DE3858 /* OMStickerMSL.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = OMStickerMSL.metal; sourceTree = "<group>"; };
+		66F3E50B2452B86A00DE3858 /* OMStickerHeaders.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OMStickerHeaders.h; sourceTree = "<group>"; };
 		66F9F29B244703EA005D05AA /* OMFaceDetect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMFaceDetect.swift; sourceTree = "<group>"; };
 		66F9F29D24470437005D05AA /* OpenGPUShowcase-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OpenGPUShowcase-Bridging-Header.h"; sourceTree = "<group>"; };
 		66F9F2A024470B2E005D05AA /* MGNetAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGNetAccount.h; sourceTree = "<group>"; };
@@ -534,7 +537,7 @@
 			isa = PBXGroup;
 			children = (
 				66B3A947243331B300036858 /* OMBaseFilter.swift */,
-				66F3E506245193B200DE3858 /* OMStickerFilter.swift */,
+				66F3E50A2452B84200DE3858 /* Sticker */,
 				66B3AB3E243DCEEA00036858 /* OMLookupFilter.swift */,
 				66F9F2D224483C73005D05AA /* OMFaceBeautyFilter.swift */,
 				66F9F29B244703EA005D05AA /* OMFaceDetect.swift */,
@@ -667,6 +670,16 @@
 				66F3E4542451407C00DE3858 /* heart_080.png */,
 			);
 			path = heart;
+			sourceTree = "<group>";
+		};
+		66F3E50A2452B84200DE3858 /* Sticker */ = {
+			isa = PBXGroup;
+			children = (
+				66F3E506245193B200DE3858 /* OMStickerFilter.swift */,
+				66F3E50B2452B86A00DE3858 /* OMStickerHeaders.h */,
+				66F3E50824528F0200DE3858 /* OMStickerMSL.metal */,
+			);
+			path = Sticker;
 			sourceTree = "<group>";
 		};
 		66F9F29F24470B2E005D05AA /* Face++ */ = {
@@ -954,6 +967,7 @@
 				66F3E44A2451319200DE3858 /* OMStickerProtocol.swift in Sources */,
 				669D1B022431EA680037B301 /* OMRender.swift in Sources */,
 				66F3E502245146C800DE3858 /* OMStickerFrame.swift in Sources */,
+				66F3E50924528F0200DE3858 /* OMStickerMSL.metal in Sources */,
 				66F3E45024513FFD00DE3858 /* OMStickerConfigManager.swift in Sources */,
 				6607DC042419D83100CC5C69 /* OGPipeline.swift in Sources */,
 				66801A4124249A0B006F7D1A /* RGBFilter.swift in Sources */,

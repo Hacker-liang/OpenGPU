@@ -33,11 +33,6 @@ typedef struct {
 } TwoInputVertextOutput;
 
 
-typedef struct {
-    float4 position [[position]];
-    device float2 *textureCoordinate;
-    
-} MultipleVertextOutput;
 
 
 #endif /* MTLShaderTypes_h */
